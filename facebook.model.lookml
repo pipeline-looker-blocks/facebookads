@@ -3,7 +3,7 @@
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
 
-- explore: facebook_adcreative_101441173373823
+- explore: facebook_adcreative
 
 - explore: facebook_adcreative_101441173373823__image_crops__100x100
 
@@ -118,6 +118,11 @@
 - explore: facebook_ads_insights_placement_and_device_101441173373823__website_ctr
 
 - explore: facebook_adsets_101441173373823
+#   joins:
+#     - join: facebook_adsets_101441173373823
+#       type: left_outer 
+#       sql_on: ${audits.ticket_id} = ${tickets.id}
+#       relationship: many_to_one
 
 - explore: facebook_adsets_101441173373823__targeting__custom_audiences
 

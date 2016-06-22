@@ -1,4 +1,4 @@
-- view: facebook_adcreative_101441173373823
+- view: facebook_adcreative
   sql_table_name: facebook.facebook_adcreative_101441173373823
   fields:
 
