@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_age_and_gender_101441173373823__cost_per_unique_ac
+- view: facebook_ads_insights_age_and_gender__cost_per_unique_ac
   sql_table_name: facebook.facebook_ads_insights_age_and_gender_101441173373823__cost_per_unique_ac
   fields:
 

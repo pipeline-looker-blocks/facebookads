@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_country_101441173373823__cost_per_unique_action_ty
+- view: facebook_ads_insights_country__cost_per_unique_action_ty
   sql_table_name: facebook.facebook_ads_insights_country_101441173373823__cost_per_unique_action_ty
   fields:
 

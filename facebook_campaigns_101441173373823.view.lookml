@@ -1,4 +1,4 @@
-- view: facebook_campaigns_101441173373823
+- view: facebook_campaigns
   sql_table_name: facebook.facebook_campaigns_101441173373823
   fields:
 

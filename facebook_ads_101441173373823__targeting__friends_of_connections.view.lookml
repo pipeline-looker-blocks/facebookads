@@ -1,4 +1,4 @@
-- view: facebook_ads_101441173373823__targeting__friends_of_connections
+- view: facebook_ads__targeting__friends_of_connections
   sql_table_name: facebook.facebook_ads_101441173373823__targeting__friends_of_connections
   fields:
 

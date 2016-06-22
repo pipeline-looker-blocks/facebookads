@@ -1,4 +1,4 @@
-- view: facebook_adsets_101441173373823__targeting__custom_audiences
+- view: facebook_adsets__targeting__custom_audiences
   sql_table_name: facebook.facebook_adsets_101441173373823__targeting__custom_audiences
   fields:
 

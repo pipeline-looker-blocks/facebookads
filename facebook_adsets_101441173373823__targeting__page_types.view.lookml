@@ -1,4 +1,4 @@
-- view: facebook_adsets_101441173373823__targeting__page_types
+- view: facebook_adsets__targeting__page_types
   sql_table_name: facebook.facebook_adsets_101441173373823__targeting__page_types
   fields:
 

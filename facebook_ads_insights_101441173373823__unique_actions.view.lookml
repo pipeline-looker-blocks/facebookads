@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_101441173373823__unique_actions
+- view: facebook_ads_insights__unique_actions
   sql_table_name: facebook.facebook_ads_insights_101441173373823__unique_actions
   fields:
 

@@ -1,4 +1,4 @@
-- view: facebook_adsets_101441173373823__targeting__excluded_connections
+- view: facebook_adsets__targeting__excluded_connections
   sql_table_name: facebook.facebook_adsets_101441173373823__targeting__excluded_connections
   fields:
 

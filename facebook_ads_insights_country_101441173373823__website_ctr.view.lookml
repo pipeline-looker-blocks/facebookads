@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_country_101441173373823__website_ctr
+- view: facebook_ads_insights_country__website_ctr
   sql_table_name: facebook.facebook_ads_insights_country_101441173373823__website_ctr
   fields:
 

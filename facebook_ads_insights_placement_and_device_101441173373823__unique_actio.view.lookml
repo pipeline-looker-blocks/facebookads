@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_placement_and_device_101441173373823__unique_actio
+- view: facebook_ads_insights_placement_and_device__unique_actio
   sql_table_name: facebook.facebook_ads_insights_placement_and_device_101441173373823__unique_actio
   fields:
 

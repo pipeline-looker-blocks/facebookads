@@ -1,4 +1,4 @@
-- view: facebook_ads_101441173373823__targeting__geo_locations__regions
+- view: facebook_ads__targeting__geo_locations__regions
   sql_table_name: facebook.facebook_ads_101441173373823__targeting__geo_locations__regions
   fields:
 

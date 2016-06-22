@@ -1,4 +1,4 @@
-- view: facebook_ads_101441173373823__conversion_specs
+- view: facebook_ads__conversion_specs
   sql_table_name: facebook.facebook_ads_101441173373823__conversion_specs
   fields:
 

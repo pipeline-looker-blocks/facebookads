@@ -1,4 +1,4 @@
-- view: facebook_campaigns_101441173373823__ads__data
+- view: facebook_campaigns__ads__data
   sql_table_name: facebook.facebook_campaigns_101441173373823__ads__data
   fields:
 

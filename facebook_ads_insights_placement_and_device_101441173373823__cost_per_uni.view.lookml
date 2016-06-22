@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_placement_and_device_101441173373823__cost_per_uni
+- view: facebook_ads_insights_placement_and_device__cost_per_uni
   sql_table_name: facebook.facebook_ads_insights_placement_and_device_101441173373823__cost_per_uni
   fields:
 

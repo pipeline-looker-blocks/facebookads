@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_101441173373823__cost_per_unique_action_type
+- view: facebook_ads_insights__cost_per_unique_action_type
   sql_table_name: facebook.facebook_ads_insights_101441173373823__cost_per_unique_action_type
   fields:
 
