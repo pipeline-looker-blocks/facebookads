@@ -5,32 +5,6 @@
 
 - explore: facebook_adcreative
 
-# - explore: facebook_adcreative_101441173373823__image_crops__100x100
-# 
-# - explore: facebook_adcreative_101441173373823__image_crops__100x100__value
-# 
-# - explore: facebook_adcreative_101441173373823__image_crops__191x100
-# 
-# - explore: facebook_adcreative_101441173373823__image_crops__191x100__value
-# 
-# - explore: facebook_adcreative_101441173373823__image_crops__400x150
-# 
-# - explore: facebook_adcreative_101441173373823__image_crops__400x150__value
-
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__child
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__image
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__image2d82580c60d19fc6d427aab2509ee1ec
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__image48d1176021c37d07ef15eda3b557963c
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__imagee31af67c77b9c680bc0025e168877096
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__imagee96aea09846281a15dd171f92e49b939
-# 
-# - explore: facebook_adcreative_101441173373823__object_story_spec__link_data__imagefa1a53cd41a55cfdf5094aa00c586d33
-
 - explore: facebook_ads
 
 - explore: facebook_ads__conversion_specs
@@ -118,31 +92,81 @@
 - explore: facebook_ads_insights_placement_and_device__website_ctr
 
 - explore: facebook_adsets
-#   joins:
-#     - join: facebook_adsets_101441173373823
-#       type: left_outer 
-#       sql_on: ${audits.ticket_id} = ${tickets.id}
-#       relationship: many_to_one
-
+  joins:
+    - join: facebook_campaigns
+      type: left_outer 
+      sql_on: ${facebook_adsets.campaign_id} = ${facebook_campaigns.id}
+      relationship: many_to_one
+    
 - explore: facebook_adsets__targeting__custom_audiences
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__custom_audiences._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__excluded_connections
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__excluded_connections._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__geo_locations__cities
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__geo_locations__cities._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__geo_locations__countries
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__geo_locations__countries._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__geo_locations__location_type
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__geo_locations__location_type._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__geo_locations__regions
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__geo_locations__regions._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__interests
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__interests._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__locales
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__locales._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__page_types
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__page_types._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_adsets__targeting__work_positions
+  joins:
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_adsets__targeting__work_positions._rjm_source_key_id} = ${facebook_adsets.id}
+      relationship: many_to_one
 
 - explore: facebook_campaigns
 
