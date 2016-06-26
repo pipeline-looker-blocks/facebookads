@@ -6,13 +6,21 @@
 - explore: facebook_adcreative
 
 - explore: facebook_ads
-
-# - explore: facebook_ads__conversion_specs
-#   joins:
-#     - join: facebook_ads
-#       type: left_outer 
-#       sql_on: ${facebook_ads__conversion_specs._rjm_source_key_id} = ${facebook_ads.id}
-#       relationship: many_to_one
+  joins:
+    - join: facebook_campaigns
+      type: left_outer 
+      sql_on: ${facebook_ads.campaign_id} = ${facebook_campaigns.id}
+      relationship: many_to_one
+      
+    - join: facebook_adsets
+      type: left_outer 
+      sql_on: ${facebook_ads.adset_id} = ${facebook_adsets.id}
+      relationship: many_to_one
+      
+    - join: facebook_adcreative
+      type: left_outer 
+      sql_on: ${facebook_ads.creative__id} = ${facebook_adcreative.id}
+      relationship: many_to_one
 
 - explore: facebook_ads__conversion_specs__action_type
   joins:
