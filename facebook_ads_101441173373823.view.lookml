@@ -73,3 +73,14 @@
     type: count
     drill_fields: [id, name]
 
+  - measure: total_actions_based_on_objective
+    type: sum
+    sql: ${TABLE}.bid_info__actions
+    
+  - measure: total_clicks_based_on_objective
+    type: sum
+    sql: ${TABLE}.bid_info__clicks
+    
+  - measure: total_reach_based_on_objective
+    type: sum
+    sql: ${TABLE}.bid_info__reach

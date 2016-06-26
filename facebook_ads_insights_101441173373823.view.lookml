@@ -264,7 +264,7 @@
     type: number
     sql: ${TABLE}.total_action_value
 
-  - dimension: total_actions
+  - dimension: actions
     type: number
     sql: ${TABLE}.total_actions
 
@@ -335,4 +335,47 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: total_actions
+    type: sum
+    sql: ${TABLE}.total_actions
+    
+  - measure: total_reach
+    type: sum
+    sql: ${TABLE}.reach
+    
+  - measure: total_clicks
+    type: sum
+    sql: ${TABLE}.clicks
+    
+  - measure: total_impressions
+    type: sum
+    sql: ${TABLE}.impressions
+    
+#### NOTE: you will need to use the frequency column that appears in your dataset.
+    
+  - measure: avg_frequency
+    description: the average number of times your ad was served to each person
+    type: avg
+    sql: ${TABLE}."frequency#2347354da11fc0a4ada9078e9bc07ed3"
+    
+#### NOTE: you will need to use the cpm column that appears in your dataset.
+    
+  - measure: avg_cpm
+    description: The average cost you've paid to have 1,000 impressions on your ad.
+    type: avg
+    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    
+#### NOTE: you will need to use the cpp column that appears in your dataset.
+    
+  - measure: avg_cpp
+    description: The average cost you've paid to have your ad served to 1,000 unique people.
+    type: avg
+    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    
+#### NOTE: you will need to use the spend column that appears in your dataset.
+    
+  - measure: total_spend_per_ad
+    type: sum
+    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
 
