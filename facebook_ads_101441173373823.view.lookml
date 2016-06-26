@@ -72,15 +72,9 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-
-  - measure: total_actions_based_on_objective
-    type: sum
-    sql: ${TABLE}.bid_info__actions
     
-  - measure: total_clicks_based_on_objective
-    type: sum
-    sql: ${TABLE}.bid_info__clicks
+### JENNA: need to add this field to campaign engagement explore
     
-  - measure: total_reach_based_on_objective
-    type: sum
-    sql: ${TABLE}.bid_info__reach
+#   - measure: total_actions
+#     type: sum
+#     sql: ${facebook_ads_insights.total_unique_actions}

@@ -70,4 +70,34 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: post_likes
+    type: sum
+    sql: ${TABLE}.value
+    filters: 
+      action_type: 'post_like'
+
+  - measure: page_likes
+    type: sum
+    sql: ${TABLE}.value
+    filters: 
+      action_type: 'like'
+      
+  - measure: post_comments
+    type: sum
+    sql: ${TABLE}.value
+    filters: 
+      action_type: 'comment'
+      
+  - measure: post_shares
+    type: sum
+    sql: ${TABLE}.value
+    filters: 
+      action_type: 'post'
+      
+  - measure: link_clicks
+    type: sum
+    sql: ${TABLE}.value
+    filters: 
+      action_type: 'link_click'
 

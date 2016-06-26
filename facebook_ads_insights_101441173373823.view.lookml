@@ -269,6 +269,7 @@
     sql: ${TABLE}.total_actions
 
   - dimension: total_unique_actions
+    description: The number of unique people who took an action such as liking your Page or installing your app as a result of your ad. For example, if the same person likes and comments on a post, they will be counted as 1 unique person.
     type: number
     sql: ${TABLE}.total_unique_actions
 
@@ -352,6 +353,15 @@
     type: sum
     sql: ${TABLE}.impressions
     
+  - measure: people_taking_action
+    description: The number of unique people who took an action such as liking your Page or installing your app as a result of your ad. For example, if the same person likes and comments on a post, they will be counted as 1 unique person.
+    type: sum
+    sql: ${TABLE}.total_unique_actions
+    
+  - measure: total_inline_link_clicks
+    type: sum
+    sql: ${TABLE}.inline_link_clicks
+    
 #### NOTE: you will need to use the frequency column that appears in your dataset.
     
   - measure: avg_frequency
@@ -378,4 +388,27 @@
   - measure: total_spend_per_ad
     type: sum
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    
+#### NOTE: you will need to use the ctr column that appears in your dataset.
+    
+  - measure: avg_ctr
+    type: avg
+    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    
+#### NOTE: you will need to use the cpc column that appears in your dataset.
+    
+  - measure: avg_cpc
+    type: avg
+    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
 
+#### NOTE: you will need to use the inline link click ctr column that appears in your dataset.
+
+  - measure: avg_inline_link_click_ctr
+    type: avg
+    sql: ${TABLE}."inline_link_click_ctr#dd6726ab933a189923547dc6bffa7558"
+    
+#### NOTE: you will need to use the cost per inline link click column that appears in your dataset.    
+    
+  - measure: avg_cost_per_inline_link_click
+    type: avg
+    sql: ${TABLE}."cost_per_inline_link_click#01932ca7b21eb72c1e10d6cb906d6b36"

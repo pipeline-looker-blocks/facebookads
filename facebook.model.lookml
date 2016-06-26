@@ -21,6 +21,11 @@
       type: left_outer 
       sql_on: ${facebook_ads.creative__id} = ${facebook_adcreative.id}
       relationship: many_to_one
+      
+    - join: facebook_ads_insights
+      type: left_outer 
+      sql_on: ${facebook_ads.id} = ${facebook_ads_insights.ad_id}
+      relationship: many_to_one
 
 - explore: facebook_ads__conversion_specs__action_type
   joins:
