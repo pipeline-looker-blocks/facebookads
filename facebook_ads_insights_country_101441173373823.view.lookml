@@ -110,6 +110,7 @@
     type: string
     sql: ${TABLE}.country
     
+## if using coordinates in `country_coordinates` view
 #   - dimension: country_location
 #     type: location
 #     sql_latitude: ${country_coordinates.latitude}

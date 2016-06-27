@@ -263,4 +263,41 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: total_clicks
+    type: sum
+    sql: ${TABLE}.clicks
+    
+  - measure: avg_cpc
+    type: avg
+    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+
+  - measure: avg_cpm
+    type: avg
+    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+
+  - measure: avg_cpp
+    type: avg
+    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+
+  - measure: avg_ctr
+    type: avg
+    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    
+  - measure: avg_frequency
+    type: avg
+    sql: ${TABLE}."frequency#9e8942e00c656a10039dd47b2558b185"
+    
+  - measure: total_impressions
+    type: sum
+    sql: ${TABLE}.impressions
+    
+  - measure: total_reach
+    type: sum
+    sql: ${TABLE}.reach
+    
+  - measure: total_spend
+    type: sum
+    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+
 
