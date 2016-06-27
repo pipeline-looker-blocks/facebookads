@@ -110,10 +110,15 @@
     type: string
     sql: ${TABLE}.country
     
-  - dimension: country_location
-    type: location
-    sql_latitude: ${country_coordinates.latitude}
-    sql_longitude: ${country_coordinates.longitude}
+#   - dimension: country_location
+#     type: location
+#     sql_latitude: ${country_coordinates.latitude}
+#     sql_longitude: ${country_coordinates.longitude}
+
+  - dimension: country_iso
+    type: string
+    map_layer: countries
+    sql: ${country_coordinates.country_iso}
 
   - dimension: cpc90542b337cc50f4babe27b54ec43a605
     type: number
