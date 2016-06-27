@@ -100,4 +100,8 @@
     sql: ${TABLE}.value
     filters: 
       action_type: 'link_click'
+      
+  - measure: total_actions
+    type: sum
+    sql: ${TABLE}.value
 

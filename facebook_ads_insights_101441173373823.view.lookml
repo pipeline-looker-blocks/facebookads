@@ -376,6 +376,7 @@
     description: The average cost you've paid to have 1,000 impressions on your ad.
     type: avg
     sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    value_format_name: usd
     
 #### NOTE: you will need to use the cpp column that appears in your dataset.
     
@@ -383,12 +384,14 @@
     description: The average cost you've paid to have your ad served to 1,000 unique people.
     type: avg
     sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    value_format_name: usd
     
 #### NOTE: you will need to use the spend column that appears in your dataset.
     
   - measure: total_spend
     type: sum
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    value_format_name: usd
     
 #### NOTE: you will need to use the ctr column that appears in your dataset.
     
@@ -401,6 +404,7 @@
   - measure: avg_cpc
     type: avg
     sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+    value_format_name: usd
 
 #### NOTE: you will need to use the inline link click ctr column that appears in your dataset.
 
