@@ -263,7 +263,7 @@
     type: number
     sql: ${TABLE}.total_action_value
 
-  - dimension: total_actions
+  - dimension: actions
     type: number
     sql: ${TABLE}.total_actions
 
@@ -370,3 +370,7 @@
   - measure: total_spend
     type: sum
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+
+  - measure: total_actions
+    type: sum
+    sql: ${TABLE}.total_actions

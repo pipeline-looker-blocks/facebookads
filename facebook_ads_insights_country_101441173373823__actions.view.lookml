@@ -70,4 +70,11 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: total_actions
+    type: sum
+    sql: ${TABLE}.value
+    
+    
+  
 
