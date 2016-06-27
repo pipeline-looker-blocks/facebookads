@@ -109,6 +109,11 @@
   - dimension: country
     type: string
     sql: ${TABLE}.country
+    
+  - dimension: country_location
+    type: location
+    sql_latitude: ${country_coordinates.latitude}
+    sql_longitude: ${country_coordinates.longitude}
 
   - dimension: cpc90542b337cc50f4babe27b54ec43a605
     type: number

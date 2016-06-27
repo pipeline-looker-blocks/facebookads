@@ -104,4 +104,35 @@
   - measure: total_actions
     type: sum
     sql: ${TABLE}.value
+    
+  - dimension: campaign_objective
+    type: string
+    sql: ${facebook_campaigns.objective}
+    
+  - dimension: campaign_name
+    type: string
+    sql: ${facebook_campaigns.name}
+    
+# ACTIONS BY OBJECTIVE
+# https://developers.facebook.com/docs/marketing-api/tracking-specs/v2.6
+    
+  - measure: total_actions_for_canvas_app_engagement_objective
+    type: sum
+    sql: ${TABLE}.value
+    filters:
+      action_type: 'app_engagement, application, post_engagement'
+      
+  - measure: total_actions_for_canvas_app_installs_objective
+    type: sum
+    sql: ${TABLE}.value
+    filters:
+      action_type: 'app_engagement, application, post_engagement'
+      
+  - measure: total_actions_for_conversions_objective
+    type: sum
+    sql: ${TABLE}.value
+    filters:
+      action_type: 'post_engagement, like'
+      
+      
 

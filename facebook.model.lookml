@@ -3,6 +3,8 @@
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
 
+- explore: country_coordinates
+
 - explore: facebook_adcreative
 
 - explore: facebook_ads
@@ -366,6 +368,11 @@
     - join: facebook_campaigns
       type: left_outer 
       sql_on: ${facebook_ads_insights_country.campaign_id} = ${facebook_campaigns.id}
+      relationship: many_to_one
+      
+    - join: country_coordinates
+      type: left_outer
+      sql_on: ${facebook_ads_insights_country.country} = ${country_coordinates.country}
       relationship: many_to_one
 
 - explore: facebook_ads_insights_country__actions
