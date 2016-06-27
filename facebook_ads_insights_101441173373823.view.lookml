@@ -340,6 +340,7 @@
   - measure: total_actions
     type: sum
     sql: ${TABLE}.total_actions
+    drill_fields: [campaign_id]
     
   - measure: total_reach
     type: sum
@@ -385,7 +386,7 @@
     
 #### NOTE: you will need to use the spend column that appears in your dataset.
     
-  - measure: total_spend_per_ad
+  - measure: total_spend
     type: sum
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
     

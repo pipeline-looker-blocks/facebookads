@@ -202,3 +202,38 @@
     type: count
     drill_fields: []
 
+  - measure: total_clicks
+    type: sum
+    sql: ${TABLE}.clicks
+    
+  - measure: avg_cpc
+    type: avg
+    sql: ${TABLE}.cpc
+
+  - measure: avg_cpm
+    type: avg
+    sql: ${TABLE}.cpm
+
+  - measure: avg_cpp
+    type: avg
+    sql: ${TABLE}.cpp
+
+  - measure: avg_ctr
+    type: avg
+    sql: ${TABLE}.ctr
+    
+  - measure: avg_frequency
+    type: avg
+    sql: ${TABLE}.frequency
+    
+  - measure: total_impressions
+    type: sum
+    sql: ${TABLE}.impressions
+    
+  - measure: total_reach
+    type: sum
+    sql: ${TABLE}.reach
+    
+  - measure: total_spend
+    type: sum
+    sql: ${TABLE}.spend
