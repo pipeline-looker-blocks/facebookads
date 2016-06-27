@@ -14,7 +14,7 @@
   elements:
 
   - name: cpc_ctr_frequency
-    title: Untitled Visualization
+    title: CPP, CTR, and frequency by device
     type: looker_column
     model: facebook
     explore: facebook_ads_insights_placement_and_device
@@ -45,7 +45,7 @@
     show_null_labels: false
     
   - name: cpp_cpm
-    title: Untitled Visualization
+    title: CPP and CPM by device
     type: looker_bar
     model: facebook
     explore: facebook_ads_insights_placement_and_device
@@ -75,7 +75,7 @@
     show_null_labels: false
   
   - name: top_level_avgs
-    title: Untitled Visualization
+    title: Top level averages
     type: looker_single_record
     model: facebook
     explore: facebook_ads_insights_placement_and_device
@@ -88,7 +88,7 @@
     show_view_names: true
   
   - name: top_level_totals
-    title: Untitled Visualization
+    title: Top level totals
     type: looker_single_record
     model: facebook
     explore: facebook_ads_insights_placement_and_device
@@ -101,7 +101,7 @@
     show_view_names: true
     
   - name: reach_v_clicks
-    title: Untitled Visualization
+    title: Reach v. clicks by placement and device
     type: looker_scatter
     model: facebook
     explore: facebook_ads_insights_placement_and_device
@@ -133,7 +133,7 @@
     point_style: circle
   
   - name: cpa_v_actions
-    title: Untitled Visualization
+    title: CPA v. actions by placement and device
     type: looker_scatter
     model: facebook
     explore: facebook_ads_insights_placement_and_device

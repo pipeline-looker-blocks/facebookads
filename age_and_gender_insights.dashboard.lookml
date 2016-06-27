@@ -22,7 +22,7 @@
   elements:
 
   - name: avg_cpc
-    title: Untitled Visualization
+    title: Average CPC
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -34,7 +34,7 @@
     show_comparison: false
   
   - name: avg_ctr
-    title: Untitled Visualization
+    title: Average CTR
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -46,7 +46,7 @@
     show_comparison: false
     
   - name: avg_cpm
-    title: Untitled Visualization
+    title: Average CPM
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -58,7 +58,7 @@
     show_comparison: false
     
   - name: avg_cpp
-    title: Untitled Visualization
+    title: Average CPP
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -70,7 +70,7 @@
     show_comparison: false
     
   - name: performance_by_age
-    title: Untitled Visualization
+    title: Performance by age group
     type: looker_column
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -102,7 +102,7 @@
     show_null_labels: false
   
   - name: reach
-    title: Untitled Visualization
+    title: Reach
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -114,7 +114,7 @@
     show_comparison: false
     
   - name: impressions
-    title: Untitled Visualization
+    title: Impressions
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -126,7 +126,7 @@
     show_comparison: false
     
   - name: reach_by_age
-    title: Untitled Visualization
+    title: Reach by age group
     type: looker_pie
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -141,7 +141,7 @@
     show_view_names: true
     
   - name: impressions_by_age
-    title: Untitled Visualization
+    title: Impressions by age group
     type: looker_pie
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -156,7 +156,7 @@
     show_view_names: true
     
   - name: clicks
-    title: Untitled Visualization
+    title: Clicks
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -168,7 +168,7 @@
     show_comparison: false
   
   - name: spend
-    title: Untitled Visualization
+    title: Spend
     type: single_value
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -180,7 +180,7 @@
     show_comparison: false
     
   - name: clicks_by_age
-    title: Untitled Visualization
+    title: Clicks by age group
     type: looker_pie
     model: facebook
     explore: facebook_ads_insights_age_and_gender
@@ -195,7 +195,7 @@
     show_view_names: true
   
   - name: spend_by_age
-    title: Untitled Visualization
+    title: Spend by age group
     type: looker_pie
     model: facebook
     explore: facebook_ads_insights_age_and_gender

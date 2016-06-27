@@ -26,7 +26,7 @@
   elements:
   
   - name: total_impressions
-    title: Untitled Visualization
+    title: Total impressions
     type: single_value
     model: facebook
     explore: facebook_ads_insights
@@ -37,7 +37,7 @@
     show_comparison: false
   
   - name: total_actions
-    title: Untitled Visualization
+    title: Total actions
     type: single_value
     model: facebook
     explore: facebook_ads_insights
@@ -48,7 +48,7 @@
     show_comparison: false
     
   - name: total_spend
-    title: Untitled Visualization
+    title: Total spend
     type: single_value
     model: facebook
     explore: facebook_ads_insights
@@ -59,7 +59,7 @@
     show_comparison: false
     
   - name: spend_actions_impressions
-    title: Untitled Visualization
+    title: Spend, actions, and impressions over time
     type: looker_line
     model: facebook
     explore: facebook_ads_insights
@@ -90,7 +90,7 @@
     interpolation: linear
     
   - name: campaign_performance
-    title: Untitled Table
+    title: Campaign performance
     type: table
     model: facebook
     explore: facebook_ads_insights
@@ -111,7 +111,7 @@
     limit_displayed_rows: false
     
   - name: campaign_value
-    title: Untitled Visualization
+    title: Campaign value
     type: looker_scatter
     model: facebook
     explore: facebook_ads_insights
@@ -147,7 +147,7 @@
     point_style: circle
     
   - name: campaign_delivery
-    title: Untitled Table
+    title: Campaign delivery
     type: table
     model: facebook
     explore: facebook_ads_insights
@@ -164,7 +164,7 @@
     limit_displayed_rows: false
     
   - name: actions_by_country
-    title: Untitled Visualization
+    title: Actions by country
     type: looker_geo_choropleth
     model: facebook
     explore: facebook_ads_insights_country
@@ -177,7 +177,7 @@
     quantize_colors: false
     
   - name: campaign_performance_and_clicks
-    title: Untitled Table
+    title: Campaign performance and clicks
     type: table
     model: facebook
     explore: facebook_ads_insights
@@ -197,7 +197,7 @@
     limit_displayed_rows: false
     
   - name: actions_by_type
-    title: Untitled Visualization
+    title: Actions by type
     type: looker_pie
     model: facebook
     explore: facebook_ads_insights__actions
@@ -209,7 +209,7 @@
     show_view_names: true
     
   - name: avg_frequency_by_objective
-    title: Untitled Visualization
+    title: Average frequency by objective
     type: looker_column
     model: facebook
     explore: facebook_ads_insights
@@ -236,7 +236,7 @@
     show_null_labels: false
     
   - name: campaign_engagement
-    title: Untitled Table
+    title: Campaign engagement
     type: table
     model: facebook
     explore: facebook_ads_insights__actions
