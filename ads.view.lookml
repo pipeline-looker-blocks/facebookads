@@ -1,15 +1,13 @@
 - view: facebook_ads
   sql_table_name: facebook.facebook_ads_101441173373823
   fields:
+  
+# API documentation here: https://developers.facebook.com/docs/marketing-api/reference/adgroup
 
   - dimension: id
     primary_key: true
     type: string
     sql: ${TABLE}.id
-
-  - dimension: _rjm_batched_at
-    type: number
-    sql: ${TABLE}._rjm_batched_at
 
   - dimension: account_id
     type: string
@@ -19,21 +17,25 @@
     type: string
     sql: ${TABLE}.adset_id
 
-  - dimension: bid_info__actions
-    type: number
-    sql: ${TABLE}.bid_info__actions
-
-  - dimension: bid_info__clicks
-    type: number
-    sql: ${TABLE}.bid_info__clicks
-
-  - dimension: bid_info__reach
-    type: number
-    sql: ${TABLE}.bid_info__reach
-
-  - dimension: bid_type
-    type: string
-    sql: ${TABLE}.bid_type
+#   - dimension: bid_info__actions
+#     description:
+#     type: number
+#     sql: ${TABLE}.bid_info__actions
+# 
+#   - dimension: bid_info__clicks
+#     description:
+#     type: number
+#     sql: ${TABLE}.bid_info__clicks
+# 
+#   - dimension: bid_info__reach
+#     description:
+#     type: number
+#     sql: ${TABLE}.bid_info__reach
+# 
+#   - dimension: bid_type
+#     description:
+#     type: string
+#     sql: ${TABLE}.bid_type
 
   - dimension: campaign_id
     type: string
@@ -43,10 +45,6 @@
     type: time
     timeframes: [time, date, week, month]
     sql: ${TABLE}.created_time
-
-  - dimension: creative__id
-    type: string
-    sql: ${TABLE}.creative__id
 
   - dimension: effective_status
     type: string
@@ -64,17 +62,6 @@
     type: number
     sql: ${TABLE}.targeting__age_min
 
-  - dimension_group: updated
-    type: time
-    timeframes: [time, date, week, month]
-    sql: ${TABLE}.updated_time
-
   - measure: count
     type: count
     drill_fields: [id, name]
-    
-### JENNA: need to add this field to campaign engagement explore
-    
-#   - measure: total_actions
-#     type: sum
-#     sql: ${facebook_ads_insights.total_unique_actions}

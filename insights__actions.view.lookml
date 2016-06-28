@@ -2,51 +2,43 @@
   sql_table_name: facebook.facebook_ads_insights_101441173373823__actions
   fields:
 
-  - dimension: 1d_click
-    type: number
-    sql: ${TABLE}.1d_click
+#   - dimension: 1d_click
+#     type: number
+#     sql: ${TABLE}.1d_click
+# 
+#   - dimension: 1d_view
+#     type: number
+#     sql: ${TABLE}.1d_view
+# 
+#   - dimension: 28d_click
+#     type: number
+#     sql: ${TABLE}.28d_click
+# 
+#   - dimension: 28d_view
+#     type: number
+#     sql: ${TABLE}.28d_view
+# 
+#   - dimension: 7d_click
+#     type: number
+#     sql: ${TABLE}.7d_click
+# 
+#   - dimension: 7d_view
+#     type: number
+#     sql: ${TABLE}.7d_view
 
-  - dimension: 1d_view
-    type: number
-    sql: ${TABLE}.1d_view
-
-  - dimension: 28d_click
-    type: number
-    sql: ${TABLE}.28d_click
-
-  - dimension: 28d_view
-    type: number
-    sql: ${TABLE}.28d_view
-
-  - dimension: 7d_click
-    type: number
-    sql: ${TABLE}.7d_click
-
-  - dimension: 7d_view
-    type: number
-    sql: ${TABLE}.7d_view
-
-  - dimension: _rjm_batched_at
-    type: number
-    sql: ${TABLE}._rjm_batched_at
-
-  - dimension: _rjm_level_0_id
-    type: number
-    sql: ${TABLE}._rjm_level_0_id
-
-  - dimension: _rjm_source_key_ad_id
+  - dimension: ad_id
     type: string
     sql: ${TABLE}._rjm_source_key_ad_id
 
-  - dimension: _rjm_source_key_adset_id
+  - dimension: adset_id
     type: string
     sql: ${TABLE}._rjm_source_key_adset_id
 
-  - dimension: _rjm_source_key_campaign_id
+  - dimension: campaign_id
     type: string
     sql: ${TABLE}._rjm_source_key_campaign_id
 
-  - dimension_group: _rjm_source_key_date_start
+  - dimension_group: date_start
     type: time
     timeframes: [time, date, week, month]
     sql: ${TABLE}._rjm_source_key_date_start
@@ -54,10 +46,6 @@
   - dimension: action_destination
     type: string
     sql: ${TABLE}.action_destination
-
-  - dimension: action_target_id
-    type: string
-    sql: ${TABLE}.action_target_id
 
   - dimension: action_type
     type: string
@@ -112,27 +100,6 @@
   - dimension: campaign_name
     type: string
     sql: ${facebook_campaigns.name}
-    
-# ACTIONS BY OBJECTIVE
-# https://developers.facebook.com/docs/marketing-api/tracking-specs/v2.6
-    
-  - measure: total_actions_for_canvas_app_engagement_objective
-    type: sum
-    sql: ${TABLE}.value
-    filters:
-      action_type: 'app_engagement, application, post_engagement'
-      
-  - measure: total_actions_for_canvas_app_installs_objective
-    type: sum
-    sql: ${TABLE}.value
-    filters:
-      action_type: 'app_engagement, application, post_engagement'
-      
-  - measure: total_actions_for_conversions_objective
-    type: sum
-    sql: ${TABLE}.value
-    filters:
-      action_type: 'post_engagement, like'
       
       
 

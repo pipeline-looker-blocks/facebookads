@@ -7,21 +7,17 @@
     type: string
     sql: ${TABLE}.id
 
-  - dimension: _rjm_batched_at
-    type: number
-    sql: ${TABLE}._rjm_batched_at
-
   - dimension: account_id
     type: string
     sql: ${TABLE}.account_id
 
-  - dimension: bid_info__clicks
-    type: number
-    sql: ${TABLE}.bid_info__clicks
-
-  - dimension: budget_remaining
-    type: number
-    sql: ${TABLE}.budget_remaining
+#   - dimension: bid_info__clicks
+#     type: number
+#     sql: ${TABLE}.bid_info__clicks
+# 
+#   - dimension: budget_remaining
+#     type: number
+#     sql: ${TABLE}.budget_remaining
 
   - dimension: campaign_id
     type: string
@@ -53,14 +49,6 @@
     type: string
     sql: ${TABLE}.name
 
-  - dimension: promoted_object__custom_event_type
-    type: string
-    sql: ${TABLE}.promoted_object__custom_event_type
-
-  - dimension: promoted_object__pixel_id
-    type: string
-    sql: ${TABLE}.promoted_object__pixel_id
-
   - dimension_group: start
     type: time
     timeframes: [time, date, week, month]
@@ -73,11 +61,6 @@
   - dimension: targeting__age_min
     type: number
     sql: ${TABLE}.targeting__age_min
-
-  - dimension_group: updated
-    type: time
-    timeframes: [time, date, week, month]
-    sql: ${TABLE}.updated_time
 
   - measure: count
     type: count

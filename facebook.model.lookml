@@ -43,17 +43,17 @@
   joins:
     - join: facebook_ads
       type: left_outer 
-      sql_on: ${facebook_ads_insights__actions._rjm_source_key_ad_id} = ${facebook_ads.id}
+      sql_on: ${facebook_ads_insights__actions.ad_id} = ${facebook_ads.id}
       relationship: many_to_one
       
     - join: facebook_adsets
       type: left_outer 
-      sql_on: ${facebook_ads_insights__actions._rjm_source_key_adset_id} = ${facebook_adsets.id}
+      sql_on: ${facebook_ads_insights__actions.adset_id} = ${facebook_adsets.id}
       relationship: many_to_one
       
     - join: facebook_campaigns
       type: left_outer 
-      sql_on: ${facebook_ads_insights__actions._rjm_source_key_campaign_id} = ${facebook_campaigns.id}
+      sql_on: ${facebook_ads_insights__actions.campaign_id} = ${facebook_campaigns.id}
       relationship: many_to_one
 
 - explore: facebook_ads_insights_age_and_gender
@@ -78,17 +78,17 @@
   joins:
     - join: facebook_ads
       type: left_outer 
-      sql_on: ${facebook_ads_insights_age_and_gender__actions._rjm_source_key_ad_id} = ${facebook_ads.id}
+      sql_on: ${facebook_ads_insights_age_and_gender__actions.ad_id} = ${facebook_ads.id}
       relationship: many_to_one
       
     - join: facebook_adsets
       type: left_outer 
-      sql_on: ${facebook_ads_insights_age_and_gender__actions._rjm_source_key_adset_id} = ${facebook_adsets.id}
+      sql_on: ${facebook_ads_insights_age_and_gender__actions.adset_id} = ${facebook_adsets.id}
       relationship: many_to_one
       
     - join: facebook_campaigns
       type: left_outer 
-      sql_on: ${facebook_ads_insights_age_and_gender__actions._rjm_source_key_campaign_id} = ${facebook_campaigns.id}
+      sql_on: ${facebook_ads_insights_age_and_gender__actions.campaign_id} = ${facebook_campaigns.id}
       relationship: many_to_one
 
 - explore: facebook_ads_insights_country
@@ -117,17 +117,17 @@
   joins:
     - join: facebook_ads
       type: left_outer 
-      sql_on: ${facebook_ads_insights_country__actions._rjm_source_key_ad_id} = ${facebook_ads.id}
+      sql_on: ${facebook_ads_insights_country__actions.ad_id} = ${facebook_ads.id}
       relationship: many_to_one
       
     - join: facebook_adsets
       type: left_outer 
-      sql_on: ${facebook_ads_insights_country__actions._rjm_source_key_adset_id} = ${facebook_adsets.id}
+      sql_on: ${facebook_ads_insights_country__actions.adset_id} = ${facebook_adsets.id}
       relationship: many_to_one
       
     - join: facebook_campaigns
       type: left_outer 
-      sql_on: ${facebook_ads_insights_country__actions._rjm_source_key_campaign_id} = ${facebook_campaigns.id}
+      sql_on: ${facebook_ads_insights_country__actions.campaign_id} = ${facebook_campaigns.id}
       relationship: many_to_one
 
 - explore: facebook_ads_insights_placement_and_device
@@ -151,17 +151,17 @@
   joins:
     - join: facebook_ads
       type: left_outer 
-      sql_on: ${facebook_ads_insights_placement_and_device__actions._rjm_source_key_ad_id} = ${facebook_ads.id}
+      sql_on: ${facebook_ads_insights_placement_and_device__actions.ad_id} = ${facebook_ads.id}
       relationship: many_to_one
       
     - join: facebook_adsets
       type: left_outer 
-      sql_on: ${facebook_ads_insights_placement_and_device__actions._rjm_source_key_adset_id} = ${facebook_adsets.id}
+      sql_on: ${facebook_ads_insights_placement_and_device__actions.adset_id} = ${facebook_adsets.id}
       relationship: many_to_one
       
     - join: facebook_campaigns
       type: left_outer 
-      sql_on: ${facebook_ads_insights_placement_and_device__actions._rjm_source_key_campaign_id} = ${facebook_campaigns.id}
+      sql_on: ${facebook_ads_insights_placement_and_device__actions.campaign_id} = ${facebook_campaigns.id}
       relationship: many_to_one
 
 - explore: facebook_adsets
@@ -172,6 +172,4 @@
       relationship: many_to_one
     
 - explore: facebook_campaigns
-
-- explore: facebook_campaigns__ads__data
 

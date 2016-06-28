@@ -6,26 +6,14 @@
     primary_key: true
     type: string
     sql: ${TABLE}.id
-
-  - dimension: _rjm_batched_at
-    type: number
-    sql: ${TABLE}._rjm_batched_at
-
+    
   - dimension: account_id
     type: string
     sql: ${TABLE}.account_id
 
-  - dimension: ads__paging__cursors__after
-    type: string
-    sql: ${TABLE}.ads__paging__cursors__after
-
-  - dimension: ads__paging__cursors__before
-    type: string
-    sql: ${TABLE}.ads__paging__cursors__before
-
-  - dimension: buying_type
-    type: string
-    sql: ${TABLE}.buying_type
+#   - dimension: buying_type
+#     type: string
+#     sql: ${TABLE}.buying_type
 
   - dimension: effective_status
     type: string
