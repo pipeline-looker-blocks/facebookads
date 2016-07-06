@@ -17,7 +17,17 @@
     - elements: [clicks_by_age, spend_by_age]
       height: 400
 
-#  filters:
+  filters:
+  
+    - name: age_group
+      type: field_filter
+      explore: facebook_ads_insights_age_and_gender
+      field: facebook_ads_insights_age_and_gender.age
+    - name: gender
+      type: field_filter
+      explore: facebook_ads_insights_age_and_gender
+      field: facebook_ads_insights_age_and_gender.gender
+      
 
   elements:
 
@@ -32,6 +42,9 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
+    listen: 
+      age_group: facebook_ads_insights_age_and_gender.age
+      gender: facebook_ads_insights_age_and_gender.gender
   
   - name: avg_ctr
     title: Average CTR
@@ -44,6 +57,9 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
+    listen: 
+      age_group: facebook_ads_insights_age_and_gender.age
+      gender: facebook_ads_insights_age_and_gender.gender
     
   - name: avg_cpm
     title: Average CPM
@@ -56,6 +72,9 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
+    listen: 
+      age_group: facebook_ads_insights_age_and_gender.age
+      gender: facebook_ads_insights_age_and_gender.gender
     
   - name: avg_cpp
     title: Average CPP
@@ -82,8 +101,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -136,8 +154,7 @@
     limit: 500
     column_limit: 50
     value_labels: legend
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
     
   - name: impressions_by_age
@@ -151,8 +168,7 @@
     limit: 500
     column_limit: 50
     value_labels: legend
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
     
   - name: clicks
@@ -190,8 +206,7 @@
     limit: 500
     column_limit: 50
     value_labels: legend
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
   
   - name: spend_by_age
@@ -205,6 +220,5 @@
     limit: 500
     column_limit: 50
     value_labels: legend
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true

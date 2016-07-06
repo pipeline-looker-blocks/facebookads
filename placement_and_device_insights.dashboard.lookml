@@ -9,7 +9,15 @@
     - elements: [reach_v_clicks, cpa_v_actions]
       height: 500
 
-#  filters:
+  filters:
+    - name: placement
+      type: field_filter
+      explore: facebook_ads_insights_placement_and_device
+      field: facebook_ads_insights_placement_and_device.placement
+    - name: device
+      type: field_filter
+      explore: facebook_ads_insights_placement_and_device
+      field: facebook_ads_insights_placement_and_device.impression_device
 
   elements:
 
@@ -25,8 +33,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -55,8 +62,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -112,8 +118,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -149,8 +154,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center

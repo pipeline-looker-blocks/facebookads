@@ -21,7 +21,11 @@
     - elements: [campaign_engagement]
       height: 400
 
-#  filters:
+  filters:
+    - name: campaign_name
+      type: string_filter
+    - name: date_start
+      type: date_filter
 
   elements:
   
@@ -35,6 +39,9 @@
     limit: 500
     show_single_value_title: true
     show_comparison: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
   
   - name: total_actions
     title: Total actions
@@ -46,17 +53,23 @@
     limit: 500
     show_single_value_title: true
     show_comparison: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: total_spend
     title: Total spend
     type: single_value
     model: facebook
     explore: facebook_ads_insights
-    measures: [facebook_ads_insights.total_actions]
-    sorts: [facebook_ads_insights.total_actions desc]
+    measures: [facebook_ads_insights.total_spend]
+    sorts: [facebook_ads_insights.total_spend desc]
     limit: 500
     show_single_value_title: true
     show_comparison: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: spend_actions_impressions
     title: Spend, actions, and impressions over time
@@ -69,8 +82,7 @@
     sorts: [facebook_ads_insights.date_start_month desc]
     limit: 500
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -88,6 +100,9 @@
     show_null_points: true
     point_style: none
     interpolation: linear
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: campaign_performance
     title: Campaign performance
@@ -109,6 +124,9 @@
     truncate_column_names: false
     table_theme: editable
     limit_displayed_rows: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: campaign_value
     title: Campaign value
@@ -126,8 +144,7 @@
     limit: 500
     column_limit: 50
     stacking: ''
-    colors: ['#62bad4', '#a9c574', '#929292', '#9fdee0', '#1f3e5a', '#90c8ae', '#92818d',
-      '#c5c6a6', '#82c2ca', '#cee0a0', '#928fb4', '#9fc190']
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -145,6 +162,9 @@
     y_axis_scale_mode: linear
     show_null_points: true
     point_style: circle
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: campaign_delivery
     title: Campaign delivery
@@ -162,6 +182,9 @@
     truncate_column_names: false
     table_theme: editable
     limit_displayed_rows: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: actions_by_country
     title: Actions by country
@@ -173,8 +196,12 @@
     sorts: [facebook_ads_insights_country.total_actions desc]
     limit: 500
     map: auto
+    colors: ['#FFCC00']
     show_view_names: true
     quantize_colors: false
+    listen:
+      campaign_name: facebook_ads_insights_country.campaign_name
+      date_start: facebook_ads_insights_country.date_start_date
     
   - name: campaign_performance_and_clicks
     title: Campaign performance and clicks
@@ -195,6 +222,9 @@
     truncate_column_names: false
     table_theme: editable
     limit_displayed_rows: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: actions_by_type
     title: Actions by type
@@ -205,8 +235,12 @@
     measures: [facebook_ads_insights__actions.total_actions]
     sorts: [facebook_ads_insights__actions.total_actions desc]
     limit: 500
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     value_labels: legend
     show_view_names: true
+    listen:
+      campaign_name: facebook_ads_insights__actions.campaign_name
+      date_start: facebook_ads_insights__actions.date_start_date
     
   - name: avg_frequency_by_objective
     title: Average frequency by objective
@@ -218,6 +252,7 @@
     sorts: [facebook_ads_insights.avg_frequency desc]
     limit: 500
     stacking: ''
+    colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -234,6 +269,9 @@
     x_axis_scale: auto
     y_axis_scale_mode: linear
     show_null_labels: false
+    listen:
+      campaign_name: facebook_ads_insights.campaign_name
+      date_start: facebook_ads_insights.date_start_date
     
   - name: campaign_engagement
     title: Campaign engagement
@@ -252,3 +290,6 @@
     truncate_column_names: false
     table_theme: editable
     limit_displayed_rows: false
+    listen:
+      campaign_name: facebook_ads_insights__actions.campaign_name
+      date_start: facebook_ads_insights__actions.date_start_date

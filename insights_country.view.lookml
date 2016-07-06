@@ -19,6 +19,10 @@
   - dimension: campaign_id
     type: string
     sql: ${TABLE}.campaign_id
+    
+  - dimension: campaign_name
+    type: string
+    sql: ${facebook_campaigns.name}
 
   - dimension: clicks
     type: number
@@ -80,6 +84,7 @@
   - dimension: spend
     type: number
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    value_format_name: usd
     
 ## AGGREGATE MEASURES
 

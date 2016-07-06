@@ -71,6 +71,7 @@
   - dimension: spend
     type: number
     sql: ${TABLE}.spend
+    value_format_name: usd
 
   - dimension: total_action_value
     type: number
