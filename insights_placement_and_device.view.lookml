@@ -70,6 +70,7 @@
     type: number
     sql: ${TABLE}.reach
     
+    
   - dimension: spend
     type: number
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
@@ -87,6 +88,7 @@
   - measure: total_clicks
     type: sum
     sql: ${TABLE}.clicks
+    drill_fields: [impression_device, placement]
     
   - measure: avg_cpc
     type: avg
@@ -115,14 +117,17 @@
   - measure: total_reach
     type: sum
     sql: ${TABLE}.reach
+    drill_fields: [impression_device, placement]
     
   - measure: total_spend
     type: sum
     sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    drill_fields: [impression_device, placement]
     
   - measure: total_actions
     type: sum
     sql: ${TABLE}.total_actions
+    drill_fields: [impression_device, placement]
 
     
 ###################################################################################################
