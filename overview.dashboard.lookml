@@ -141,7 +141,7 @@
       expression: ${facebook_ads_insights.total_spend} / ${facebook_ads_insights.total_actions}
     hidden_fields: [facebook_ads_insights.total_spend, facebook_campaigns.name]
     sorts: [cost_per_action desc]
-    description: Evaluate campaign performance by comparing the actions generated to the total spent on the campaign.
+    description: 'Evaluate campaign performance by comparing the actions generated to the total spent on the campaign.'
     limit: 500
     column_limit: 50
     stacking: ''
