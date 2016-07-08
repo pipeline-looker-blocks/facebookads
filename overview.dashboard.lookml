@@ -129,7 +129,7 @@
       date_start: facebook_ads_insights.date_start_date
     
   - name: campaign_value
-    title: Campaign value
+    title: Cost per action v. total actions by campaign
     type: looker_scatter
     model: facebook
     explore: facebook_ads_insights
