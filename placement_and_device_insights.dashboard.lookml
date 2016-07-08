@@ -22,7 +22,7 @@
   elements:
 
   - name: cpc_ctr_frequency
-    title: CPP, CTR, and frequency by device
+    title: CPC, CTR, and frequency by device
     type: looker_column
     model: facebook
     explore: facebook_ads_insights_placement_and_device
