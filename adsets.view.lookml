@@ -1,4 +1,4 @@
-- view: facebook_adsets
+- view: adsets
   sql_table_name: facebook.facebook_adsets_101441173373823
   fields:
 

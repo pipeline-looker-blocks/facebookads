@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_age_and_gender__actions
+- view: ad_actions_by_age_and_gender
   sql_table_name: facebook.facebook_ads_insights_age_and_gender_101441173373823__actions
   fields:
 

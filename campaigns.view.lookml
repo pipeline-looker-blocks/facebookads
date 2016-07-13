@@ -1,5 +1,5 @@
-- view: facebook_campaigns
-  sql_table_name: facebook.facebook_campaigns_101441173373823
+- view: campaigns
+  sql_table_name: facebook.campaigns_101441173373823
   fields:
 
   - dimension: id
@@ -30,4 +30,3 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-

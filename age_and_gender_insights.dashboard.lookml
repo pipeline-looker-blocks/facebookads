@@ -21,12 +21,12 @@
   
     - name: age_group
       type: field_filter
-      explore: facebook_ads_insights_age_and_gender
-      field: facebook_ads_insights_age_and_gender.age
+      explore: ad_insights_by_age_and_gender
+      field: ad_insights_by_age_and_gender.age
     - name: gender
       type: field_filter
-      explore: facebook_ads_insights_age_and_gender
-      field: facebook_ads_insights_age_and_gender.gender
+      explore: ad_insights_by_age_and_gender
+      field: ad_insights_by_age_and_gender.gender
       
 
   elements:
@@ -35,54 +35,54 @@
     title: Average CPC
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.avg_cpc]
-    sorts: [facebook_ads_insights_age_and_gender.avg_cpc desc]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.avg_cpc]
+    sorts: [ad_insights_by_age_and_gender.avg_cpc desc]
     limit: 500
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
     listen: 
-      age_group: facebook_ads_insights_age_and_gender.age
-      gender: facebook_ads_insights_age_and_gender.gender
+      age_group: ad_insights_by_age_and_gender.age
+      gender: ad_insights_by_age_and_gender.gender
   
   - name: avg_ctr
     title: Average CTR
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.avg_ctr]
-    sorts: [facebook_ads_insights_age_and_gender.avg_ctr desc]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.avg_ctr]
+    sorts: [ad_insights_by_age_and_gender.avg_ctr desc]
     limit: 500
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
     listen: 
-      age_group: facebook_ads_insights_age_and_gender.age
-      gender: facebook_ads_insights_age_and_gender.gender
+      age_group: ad_insights_by_age_and_gender.age
+      gender: ad_insights_by_age_and_gender.gender
     
   - name: avg_cpm
     title: Average CPM
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.avg_cpm]
-    sorts: [facebook_ads_insights_age_and_gender.avg_cpm desc]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.avg_cpm]
+    sorts: [ad_insights_by_age_and_gender.avg_cpm desc]
     limit: 500
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
     listen: 
-      age_group: facebook_ads_insights_age_and_gender.age
-      gender: facebook_ads_insights_age_and_gender.gender
+      age_group: ad_insights_by_age_and_gender.age
+      gender: ad_insights_by_age_and_gender.gender
     
   - name: avg_cpp
     title: Average CPP
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.avg_cpp]
-    sorts: [facebook_ads_insights_age_and_gender.avg_cpp desc]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.avg_cpp]
+    sorts: [ad_insights_by_age_and_gender.avg_cpp desc]
     limit: 500
     column_limit: 50
     show_single_value_title: true
@@ -92,12 +92,12 @@
     title: Performance by age group
     type: looker_column
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    dimensions: [facebook_ads_insights_age_and_gender.age]
-    measures: [facebook_ads_insights_age_and_gender.avg_cpc, facebook_ads_insights_age_and_gender.avg_ctr,
-      facebook_ads_insights_age_and_gender.avg_frequency, facebook_ads_insights_age_and_gender.avg_cpm,
-      facebook_ads_insights_age_and_gender.avg_cpp]
-    sorts: [facebook_ads_insights_age_and_gender.avg_cpc desc]
+    explore: ad_insights_by_age_and_gender
+    dimensions: [ad_insights_by_age_and_gender.age]
+    measures: [ad_insights_by_age_and_gender.avg_cpc, ad_insights_by_age_and_gender.avg_ctr,
+      ad_insights_by_age_and_gender.avg_frequency, ad_insights_by_age_and_gender.avg_cpm,
+      ad_insights_by_age_and_gender.avg_cpp]
+    sorts: [ad_insights_by_age_and_gender.avg_cpc desc]
     limit: 500
     column_limit: 50
     stacking: ''
@@ -123,9 +123,9 @@
     title: Reach
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.total_reach]
-    sorts: [facebook_ads_insights_age_and_gender.total_reach desc 0]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.total_reach]
+    sorts: [ad_insights_by_age_and_gender.total_reach desc 0]
     limit: 500
     column_limit: 50
     show_single_value_title: true
@@ -135,9 +135,9 @@
     title: Impressions
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.total_impressions]
-    sorts: [facebook_ads_insights_age_and_gender.total_impressions desc]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.total_impressions]
+    sorts: [ad_insights_by_age_and_gender.total_impressions desc]
     limit: 500
     column_limit: 50
     show_single_value_title: true
@@ -147,10 +147,10 @@
     title: Reach by age group
     type: looker_pie
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    dimensions: [facebook_ads_insights_age_and_gender.age]
-    measures: [facebook_ads_insights_age_and_gender.total_reach]
-    sorts: [facebook_ads_insights_age_and_gender.total_reach desc 0]
+    explore: ad_insights_by_age_and_gender
+    dimensions: [ad_insights_by_age_and_gender.age]
+    measures: [ad_insights_by_age_and_gender.total_reach]
+    sorts: [ad_insights_by_age_and_gender.total_reach desc 0]
     limit: 500
     column_limit: 50
     value_labels: legend
@@ -161,10 +161,10 @@
     title: Impressions by age group
     type: looker_pie
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    dimensions: [facebook_ads_insights_age_and_gender.age]
-    measures: [facebook_ads_insights_age_and_gender.total_impressions]
-    sorts: [facebook_ads_insights_age_and_gender.total_impressions desc]
+    explore: ad_insights_by_age_and_gender
+    dimensions: [ad_insights_by_age_and_gender.age]
+    measures: [ad_insights_by_age_and_gender.total_impressions]
+    sorts: [ad_insights_by_age_and_gender.total_impressions desc]
     limit: 500
     column_limit: 50
     value_labels: legend
@@ -175,9 +175,9 @@
     title: Clicks
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.total_clicks]
-    sorts: [facebook_ads_insights_age_and_gender.total_clicks desc 0]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.total_clicks]
+    sorts: [ad_insights_by_age_and_gender.total_clicks desc 0]
     limit: 500
     column_limit: 50
     show_single_value_title: true
@@ -187,9 +187,9 @@
     title: Spend
     type: single_value
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    measures: [facebook_ads_insights_age_and_gender.total_spend]
-    sorts: [facebook_ads_insights_age_and_gender.total_spend desc 0]
+    explore: ad_insights_by_age_and_gender
+    measures: [ad_insights_by_age_and_gender.total_spend]
+    sorts: [ad_insights_by_age_and_gender.total_spend desc 0]
     limit: 500
     column_limit: 50
     show_single_value_title: true
@@ -199,10 +199,10 @@
     title: Clicks by age group
     type: looker_pie
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    dimensions: [facebook_ads_insights_age_and_gender.age]
-    measures: [facebook_ads_insights_age_and_gender.total_clicks]
-    sorts: [facebook_ads_insights_age_and_gender.total_clicks desc 0]
+    explore: ad_insights_by_age_and_gender
+    dimensions: [ad_insights_by_age_and_gender.age]
+    measures: [ad_insights_by_age_and_gender.total_clicks]
+    sorts: [ad_insights_by_age_and_gender.total_clicks desc 0]
     limit: 500
     column_limit: 50
     value_labels: legend
@@ -213,10 +213,10 @@
     title: Spend by age group
     type: looker_pie
     model: facebook
-    explore: facebook_ads_insights_age_and_gender
-    dimensions: [facebook_ads_insights_age_and_gender.age]
-    measures: [facebook_ads_insights_age_and_gender.total_spend]
-    sorts: [facebook_ads_insights_age_and_gender.total_spend desc 0]
+    explore: ad_insights_by_age_and_gender
+    dimensions: [ad_insights_by_age_and_gender.age]
+    measures: [ad_insights_by_age_and_gender.total_spend]
+    sorts: [ad_insights_by_age_and_gender.total_spend desc 0]
     limit: 500
     column_limit: 50
     value_labels: legend

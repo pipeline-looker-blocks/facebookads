@@ -1,4 +1,4 @@
-- view: facebook_ads_insights
+- view: ad_insights
   sql_table_name: facebook.facebook_ads_insights_101441173373823
   fields:
   
@@ -24,7 +24,7 @@
     
   - dimension: campaign_name
     type: string
-    sql: ${facebook_campaigns.name}
+    sql: ${campaigns.name}
     
   - dimension: clicks
     type: number

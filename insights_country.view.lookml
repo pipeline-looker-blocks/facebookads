@@ -1,4 +1,4 @@
-- view: facebook_ads_insights_country
+- view: ad_insights_by_country
   sql_table_name: facebook.facebook_ads_insights_country_101441173373823
   fields:
   
@@ -22,7 +22,7 @@
     
   - dimension: campaign_name
     type: string
-    sql: ${facebook_campaigns.name}
+    sql: ${campaigns.name}
 
   - dimension: clicks
     type: number

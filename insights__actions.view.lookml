@@ -1,4 +1,4 @@
-- view: facebook_ads_insights__actions
+- view: ad_action_insights
   sql_table_name: facebook.facebook_ads_insights_101441173373823__actions
   fields:
 
@@ -95,11 +95,10 @@
     
   - dimension: campaign_objective
     type: string
-    sql: ${facebook_campaigns.objective}
+    sql: ${campaigns.objective}
     
   - dimension: campaign_name
     type: string
-    sql: ${facebook_campaigns.name}
+    sql: ${campaigns.name}
       
       
-

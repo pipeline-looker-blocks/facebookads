@@ -12,12 +12,12 @@
   filters:
     - name: placement
       type: field_filter
-      explore: facebook_ads_insights_placement_and_device
-      field: facebook_ads_insights_placement_and_device.placement
+      explore: ad_insights_by_placement_and_device
+      field: ad_insights_by_placement_and_device.placement
     - name: device
       type: field_filter
-      explore: facebook_ads_insights_placement_and_device
-      field: facebook_ads_insights_placement_and_device.impression_device
+      explore: ad_insights_by_placement_and_device
+      field: ad_insights_by_placement_and_device.impression_device
 
   elements:
 
@@ -25,11 +25,11 @@
     title: CPC, CTR, and frequency by device
     type: looker_column
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    dimensions: [facebook_ads_insights_placement_and_device.impression_device]
-    measures: [facebook_ads_insights_placement_and_device.avg_cpc, facebook_ads_insights_placement_and_device.avg_ctr,
-      facebook_ads_insights_placement_and_device.avg_frequency]
-    sorts: [facebook_ads_insights_placement_and_device.avg_cpc desc]
+    explore: ad_insights_by_placement_and_device
+    dimensions: [ad_insights_by_placement_and_device.impression_device]
+    measures: [ad_insights_by_placement_and_device.avg_cpc, ad_insights_by_placement_and_device.avg_ctr,
+      ad_insights_by_placement_and_device.avg_frequency]
+    sorts: [ad_insights_by_placement_and_device.avg_cpc desc]
     limit: 500
     column_limit: 50
     stacking: ''
@@ -55,10 +55,10 @@
     title: CPP and CPM by device
     type: looker_bar
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    dimensions: [facebook_ads_insights_placement_and_device.impression_device]
-    measures: [facebook_ads_insights_placement_and_device.avg_cpp, facebook_ads_insights_placement_and_device.avg_cpm]
-    sorts: [facebook_ads_insights_placement_and_device.avg_cpp desc]
+    explore: ad_insights_by_placement_and_device
+    dimensions: [ad_insights_by_placement_and_device.impression_device]
+    measures: [ad_insights_by_placement_and_device.avg_cpp, ad_insights_by_placement_and_device.avg_cpm]
+    sorts: [ad_insights_by_placement_and_device.avg_cpp desc]
     limit: 500
     column_limit: 50
     stacking: ''
@@ -84,11 +84,11 @@
     title: Top level averages
     type: looker_single_record
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    measures: [facebook_ads_insights_placement_and_device.avg_cpc, facebook_ads_insights_placement_and_device.avg_cpm,
-      facebook_ads_insights_placement_and_device.avg_cpp, facebook_ads_insights_placement_and_device.avg_ctr,
-      facebook_ads_insights_placement_and_device.avg_frequency]
-    sorts: [facebook_ads_insights_placement_and_device.avg_cpc desc]
+    explore: ad_insights_by_placement_and_device
+    measures: [ad_insights_by_placement_and_device.avg_cpc, ad_insights_by_placement_and_device.avg_cpm,
+      ad_insights_by_placement_and_device.avg_cpp, ad_insights_by_placement_and_device.avg_ctr,
+      ad_insights_by_placement_and_device.avg_frequency]
+    sorts: [ad_insights_by_placement_and_device.avg_cpc desc]
     limit: 500
     column_limit: 50
     show_view_names: true
@@ -97,11 +97,11 @@
     title: Top level totals
     type: looker_single_record
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    measures: [facebook_ads_insights_placement_and_device.total_reach, facebook_ads_insights_placement_and_device.total_actions,
-      facebook_ads_insights_placement_and_device.total_clicks, facebook_ads_insights_placement_and_device.total_impressions,
-      facebook_ads_insights_placement_and_device.total_spend]
-    sorts: [facebook_ads_insights_placement_and_device.total_reach desc]
+    explore: ad_insights_by_placement_and_device
+    measures: [ad_insights_by_placement_and_device.total_reach, ad_insights_by_placement_and_device.total_actions,
+      ad_insights_by_placement_and_device.total_clicks, ad_insights_by_placement_and_device.total_impressions,
+      ad_insights_by_placement_and_device.total_spend]
+    sorts: [ad_insights_by_placement_and_device.total_reach desc]
     limit: 500
     column_limit: 50
     show_view_names: true
@@ -110,11 +110,11 @@
     title: Reach v. clicks by placement and device
     type: looker_scatter
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    dimensions: [facebook_ads_insights_placement_and_device.impression_device, facebook_ads_insights_placement_and_device.placement]
-    measures: [facebook_ads_insights_placement_and_device.total_reach, facebook_ads_insights_placement_and_device.total_clicks]
-    hidden_fields: [facebook_ads_insights_placement_and_device.impression_device, facebook_ads_insights_placement_and_device.placement]
-    sorts: [facebook_ads_insights_placement_and_device.total_reach desc]
+    explore: ad_insights_by_placement_and_device
+    dimensions: [ad_insights_by_placement_and_device.impression_device, ad_insights_by_placement_and_device.placement]
+    measures: [ad_insights_by_placement_and_device.total_reach, ad_insights_by_placement_and_device.total_clicks]
+    hidden_fields: [ad_insights_by_placement_and_device.impression_device, ad_insights_by_placement_and_device.placement]
+    sorts: [ad_insights_by_placement_and_device.total_reach desc]
     limit: 500
     column_limit: 50
     stacking: ''
@@ -141,16 +141,16 @@
     title: CPA v. actions by placement and device
     type: looker_scatter
     model: facebook
-    explore: facebook_ads_insights_placement_and_device
-    dimensions: [facebook_ads_insights_placement_and_device.impression_device, facebook_ads_insights_placement_and_device.placement]
-    measures: [facebook_ads_insights_placement_and_device.total_spend, facebook_ads_insights_placement_and_device.total_actions]
+    explore: ad_insights_by_placement_and_device
+    dimensions: [ad_insights_by_placement_and_device.impression_device, ad_insights_by_placement_and_device.placement]
+    measures: [ad_insights_by_placement_and_device.total_spend, ad_insights_by_placement_and_device.total_actions]
     dynamic_fields:
     - table_calculation: cost_per_action
       label: Cost per action
-      expression: ${facebook_ads_insights_placement_and_device.total_spend} / ${facebook_ads_insights_placement_and_device.total_actions}
-    hidden_fields: [facebook_ads_insights_placement_and_device.impression_device, facebook_ads_insights_placement_and_device.total_spend,
-      facebook_ads_insights_placement_and_device.placement]
-    sorts: [facebook_ads_insights_placement_and_device.total_spend desc]
+      expression: ${ad_insights_by_placement_and_device.total_spend} / ${ad_insights_by_placement_and_device.total_actions}
+    hidden_fields: [ad_insights_by_placement_and_device.impression_device, ad_insights_by_placement_and_device.total_spend,
+      ad_insights_by_placement_and_device.placement]
+    sorts: [ad_insights_by_placement_and_device.total_spend desc]
     limit: 500
     column_limit: 50
     stacking: ''
