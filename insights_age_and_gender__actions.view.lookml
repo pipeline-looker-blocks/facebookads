@@ -46,19 +46,19 @@
     type: string
     sql: ${TABLE}._rjm_source_key_gender
 
-  - dimension: action_destination
+  - dimension: action_destination_by_age_and_gender
     type: string
     sql: ${TABLE}.action_destination
 
-  - dimension: action_type
+  - dimension: action_type_by_age_and_gender
     type: string
     sql: ${TABLE}.action_type
 
-  - dimension: value
+  - dimension: value_by_age_and_gender
     type: number
     sql: ${TABLE}.value
 
-  - measure: count
+  - measure: count_by_age_and_gender
     type: count
     drill_fields: []
 
