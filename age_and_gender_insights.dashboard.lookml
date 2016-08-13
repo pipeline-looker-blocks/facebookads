@@ -38,7 +38,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.avg_cpc]
     sorts: [ad_insights_by_age_and_gender.avg_cpc desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -53,7 +53,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.avg_ctr]
     sorts: [ad_insights_by_age_and_gender.avg_ctr desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -68,7 +68,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.avg_cpm]
     sorts: [ad_insights_by_age_and_gender.avg_cpm desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -83,7 +83,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.avg_cpp]
     sorts: [ad_insights_by_age_and_gender.avg_cpp desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -98,7 +98,7 @@
       ad_insights_by_age_and_gender.avg_frequency, ad_insights_by_age_and_gender.avg_cpm,
       ad_insights_by_age_and_gender.avg_cpp]
     sorts: [ad_insights_by_age_and_gender.avg_cpc desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     stacking: ''
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
@@ -126,7 +126,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.total_reach]
     sorts: [ad_insights_by_age_and_gender.total_reach desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -138,7 +138,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.total_impressions]
     sorts: [ad_insights_by_age_and_gender.total_impressions desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -151,7 +151,7 @@
     dimensions: [ad_insights_by_age_and_gender.age]
     measures: [ad_insights_by_age_and_gender.total_reach]
     sorts: [ad_insights_by_age_and_gender.total_reach desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
@@ -165,7 +165,7 @@
     dimensions: [ad_insights_by_age_and_gender.age]
     measures: [ad_insights_by_age_and_gender.total_impressions]
     sorts: [ad_insights_by_age_and_gender.total_impressions desc]
-    limit: 500
+    limit: 5000
     column_limit: 50
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
@@ -178,7 +178,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.total_clicks]
     sorts: [ad_insights_by_age_and_gender.total_clicks desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -190,7 +190,7 @@
     explore: ad_insights_by_age_and_gender
     measures: [ad_insights_by_age_and_gender.total_spend]
     sorts: [ad_insights_by_age_and_gender.total_spend desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
@@ -203,7 +203,7 @@
     dimensions: [ad_insights_by_age_and_gender.age]
     measures: [ad_insights_by_age_and_gender.total_clicks]
     sorts: [ad_insights_by_age_and_gender.total_clicks desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
@@ -217,7 +217,7 @@
     dimensions: [ad_insights_by_age_and_gender.age]
     measures: [ad_insights_by_age_and_gender.total_spend]
     sorts: [ad_insights_by_age_and_gender.total_spend desc 0]
-    limit: 500
+    limit: 5000
     column_limit: 50
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']

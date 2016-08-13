@@ -1,5 +1,5 @@
 - view: ad_insights_by_country
-  sql_table_name: facebook.facebook_ads_insights_country_101441173373823
+  sql_table_name: looker_facebook.facebook_ads_insights_country_x
   fields:
   
 ## STANDARD FIELDS
@@ -45,19 +45,19 @@
     
   - dimension: cpc
     type: number
-    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+    sql: ${TABLE}.cpc
 
   - dimension: cpm
     type: number
-    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    sql: ${TABLE}.cpm
 
   - dimension: cpp
     type: number
-    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    sql: ${TABLE}.cpp
 
   - dimension: ctr
     type: number
-    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    sql: ${TABLE}.ctr
     
   - dimension_group: date_start
     type: time
@@ -71,7 +71,7 @@
     
   - dimension: frequency
     type: number
-    sql: ${TABLE}."frequency#9e8942e00c656a10039dd47b2558b185"
+    sql: ${TABLE}.frequency
 
   - dimension: impressions
     type: number
@@ -83,7 +83,7 @@
     
   - dimension: spend
     type: number
-    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    sql: ${TABLE}.spend
     value_format_name: usd
     
 ## AGGREGATE MEASURES
@@ -99,23 +99,23 @@
     
   - measure: avg_cpc
     type: avg
-    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+    sql: ${TABLE}.cpc
 
   - measure: avg_cpm
     type: avg
-    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    sql: ${TABLE}.cpm
 
   - measure: avg_cpp
     type: avg
-    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    sql: ${TABLE}.cpp
 
   - measure: avg_ctr
     type: avg
-    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    sql: ${TABLE}.ctr
     
   - measure: avg_frequency
     type: avg
-    sql: ${TABLE}."frequency#9e8942e00c656a10039dd47b2558b185"
+    sql: ${TABLE}.frequency
     
   - measure: total_impressions
     type: sum
@@ -127,7 +127,7 @@
     
   - measure: total_spend
     type: sum
-    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    sql: ${TABLE}.spend
 
   - measure: total_actions
     type: sum

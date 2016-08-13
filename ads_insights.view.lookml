@@ -1,5 +1,5 @@
 - view: ad_insights
-  sql_table_name: facebook.facebook_ads_insights_101441173373823
+  sql_table_name: looker_facebook.facebook_ads_insights_x
   fields:
   
 # API documentation: https://developers.facebook.com/docs/marketing-api/insights/fields/v2.6
@@ -32,23 +32,23 @@
 
   - dimension: cost_per_total_action
     type: number
-    sql: ${TABLE}."cost_per_total_action#405fbef9027a163771ac7ebac9bd8abb"
+    sql: ${TABLE}.cost_per_total_action
 
   - dimension: cpc
     type: number
-    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+    sql: ${TABLE}.cpc
 
   - dimension: cpm
     type: number
-    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    sql: ${TABLE}.cpm
 
   - dimension: cpp
     type: number
-    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    sql: ${TABLE}.cpp
 
   - dimension: ctr
     type: number
-    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    sql: ${TABLE}.ctr
 
   - dimension_group: date_start
     type: time
@@ -62,7 +62,7 @@
     
   - dimension: frequency
     type: number
-    sql: ${TABLE}."frequency#2347354da11fc0a4ada9078e9bc07ed3"
+    sql: ${TABLE}.frequency
 
   - dimension: impressions
     type: number
@@ -74,7 +74,7 @@
     
   - dimension: spend
     type: number
-    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    sql: ${TABLE}.spend
     value_format_name: usd
 
   - dimension: total_action_value
@@ -126,14 +126,14 @@
   - measure: avg_frequency
     description: the average number of times your ad was served to each person
     type: avg
-    sql: ${TABLE}."frequency#2347354da11fc0a4ada9078e9bc07ed3"
+    sql: ${TABLE}.frequency
     
 #### NOTE: you will need to use the cpm column that appears in your dataset.
     
   - measure: avg_cpm
     description: The average cost you've paid to have 1,000 impressions on your ad.
     type: avg
-    sql: ${TABLE}."cpm#d10d4a65eb6816330baae5c949f744cf"
+    sql: ${TABLE}.cpm
     value_format_name: usd
     
 #### NOTE: you will need to use the cpp column that appears in your dataset.
@@ -141,40 +141,40 @@
   - measure: avg_cpp
     description: The average cost you've paid to have your ad served to 1,000 unique people.
     type: avg
-    sql: ${TABLE}."cpp#3766aac26f07ed8e5f9af44ec7d4e404"
+    sql: ${TABLE}.cpp
     value_format_name: usd
     
 #### NOTE: you will need to use the spend column that appears in your dataset.
     
   - measure: total_spend
     type: sum
-    sql: ${TABLE}."spend#9f4eb4b1f15df4626f9944164642e186"
+    sql: ${TABLE}.spend
     value_format_name: usd
     
 #### NOTE: you will need to use the ctr column that appears in your dataset.
     
   - measure: avg_ctr
     type: avg
-    sql: ${TABLE}."ctr#05b875cc75dbeba17e1cc1148362b070"
+    sql: ${TABLE}.ctr
     
 #### NOTE: you will need to use the cpc column that appears in your dataset.
     
   - measure: avg_cpc
     type: avg
-    sql: ${TABLE}."cpc#90542b337cc50f4babe27b54ec43a605"
+    sql: ${TABLE}.cpc
     value_format_name: usd
 
 #### NOTE: you will need to use the inline link click ctr column that appears in your dataset.
 
   - measure: avg_inline_link_click_ctr
     type: avg
-    sql: ${TABLE}."inline_link_click_ctr#dd6726ab933a189923547dc6bffa7558"
+    sql: ${TABLE}.inline_link_click_ctr
     
 #### NOTE: you will need to use the cost per inline link click column that appears in your dataset.    
     
   - measure: avg_cost_per_inline_link_click
     type: avg
-    sql: ${TABLE}."cost_per_inline_link_click#01932ca7b21eb72c1e10d6cb906d6b36"
+    sql: ${TABLE}.cost_per_inline_link_click
 
 
 ##########################################################################################################

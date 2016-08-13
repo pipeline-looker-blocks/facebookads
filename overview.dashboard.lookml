@@ -36,7 +36,7 @@
     explore: ad_insights
     measures: [ad_insights.total_impressions]
     sorts: [ad_insights.total_impressions desc]
-    limit: 500
+    limit: 5000
     show_single_value_title: true
     show_comparison: false
     listen:
@@ -50,7 +50,7 @@
     explore: ad_insights
     measures: [ad_insights.total_actions]
     sorts: [ad_insights.total_actions desc]
-    limit: 500
+    limit: 5000
     show_single_value_title: true
     show_comparison: false
     listen:
@@ -64,7 +64,7 @@
     explore: ad_insights
     measures: [ad_insights.total_spend]
     sorts: [ad_insights.total_spend desc]
-    limit: 500
+    limit: 5000
     show_single_value_title: true
     show_comparison: false
     listen:
@@ -80,7 +80,7 @@
     measures: [ad_insights.total_spend, ad_insights.total_actions,
       ad_insights.total_impressions]
     sorts: [ad_insights.date_start_month desc]
-    limit: 500
+    limit: 5000
     stacking: ''
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
@@ -118,7 +118,7 @@
       label: cost_per_action
       expression: ${ad_insights.total_spend} / ${ad_insights.total_actions}
     sorts: [campaigns.name]
-    limit: 500
+    limit: 5000
     show_view_names: false
     show_row_numbers: true
     truncate_column_names: false
@@ -142,7 +142,7 @@
     hidden_fields: [ad_insights.total_spend, campaigns.name]
     sorts: [cost_per_action desc]
     description: 'Evaluate campaign performance by comparing the actions generated to the total spent on the campaign.'
-    limit: 500
+    limit: 5000
     column_limit: 50
     stacking: ''
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
@@ -177,7 +177,7 @@
     measures: [ad_insights.total_reach, ad_insights.avg_frequency,
       ad_insights.avg_cpp, ad_insights.avg_cpm, ad_insights.total_impressions]
     sorts: [campaigns.name]
-    limit: 500
+    limit: 5000
     show_view_names: false
     show_row_numbers: true
     truncate_column_names: false
@@ -195,7 +195,7 @@
     dimensions: [ad_insights_by_country.country_iso]
     measures: [ad_insights_by_country.total_actions]
     sorts: [ad_insights_by_country.total_actions desc]
-    limit: 500
+    limit: 5000
     map: auto
     colors: ['#FFCC00']
     show_view_names: true
@@ -217,7 +217,7 @@
       ad_insights.total_inline_link_clicks, ad_insights.avg_inline_link_click_ctr,
       ad_insights.avg_cost_per_inline_link_click, ad_insights.total_spend]
     sorts: [ad_insights.total_actions desc]
-    limit: 500
+    limit: 5000
     show_view_names: false
     show_row_numbers: true
     truncate_column_names: false
@@ -235,7 +235,7 @@
     dimensions: [ad_action_insights.action_type]
     measures: [ad_action_insights.total_actions]
     sorts: [ad_action_insights.total_actions desc]
-    limit: 500
+    limit: 5000
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     value_labels: legend
     show_view_names: true
@@ -251,7 +251,7 @@
     dimensions: [campaigns.objective]
     measures: [ad_insights.avg_frequency]
     sorts: [ad_insights.avg_frequency desc]
-    limit: 500
+    limit: 5000
     stacking: ''
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_value_labels: false
@@ -285,7 +285,7 @@
       ad_action_insights.link_clicks, ad_action_insights.page_likes,
       ad_action_insights.post_shares]
     sorts: [campaigns.name]
-    limit: 500
+    limit: 5000
     show_view_names: false
     show_row_numbers: true
     truncate_column_names: false

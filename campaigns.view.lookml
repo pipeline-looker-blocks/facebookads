@@ -1,5 +1,5 @@
 - view: campaigns
-  sql_table_name: facebook.campaigns_101441173373823
+  sql_table_name: looker_facebook.campaigns_x
   fields:
 
   - dimension: id
