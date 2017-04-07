@@ -28,7 +28,7 @@
       type: date_filter
 
   elements:
-  
+
   - name: total_impressions
     title: Total impressions
     type: single_value
@@ -42,7 +42,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-  
+
   - name: total_actions
     title: Total actions
     type: single_value
@@ -56,7 +56,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: total_spend
     title: Total spend
     type: single_value
@@ -70,7 +70,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: spend_actions_impressions
     title: Spend, actions, and impressions over time
     type: looker_line
@@ -103,7 +103,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: campaign_performance
     title: Campaign performance
     type: table
@@ -127,7 +127,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: campaign_value
     title: Cost per action v. total actions by campaign
     type: looker_scatter
@@ -166,7 +166,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: campaign_delivery
     title: Campaign delivery
     type: table
@@ -186,7 +186,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: actions_by_country
     title: Actions by country
     type: looker_geo_choropleth
@@ -203,7 +203,7 @@
     listen:
       campaign_name: ad_insights_by_country.campaign_name
       date_start: ad_insights_by_country.date_start_date
-    
+
   - name: campaign_performance_and_clicks
     title: Campaign performance and clicks
     type: table
@@ -226,7 +226,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: actions_by_type
     title: Actions by type
     type: looker_pie
@@ -242,7 +242,7 @@
     listen:
       campaign_name: ad_action_insights.campaign_name
       date_start: ad_action_insights.date_start_date
-    
+
   - name: avg_frequency_by_objective
     title: Average frequency by objective
     type: looker_column
@@ -273,7 +273,7 @@
     listen:
       campaign_name: ad_insights.campaign_name
       date_start: ad_insights.date_start_date
-    
+
   - name: campaign_engagement
     title: Campaign engagement
     type: table

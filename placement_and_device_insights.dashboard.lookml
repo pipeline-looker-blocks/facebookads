@@ -50,7 +50,7 @@
     x_axis_scale: auto
     y_axis_scale_mode: linear
     show_null_labels: false
-    
+
   - name: cpp_cpm
     title: CPP and CPM by device
     type: looker_bar
@@ -79,7 +79,7 @@
     x_axis_scale: auto
     y_axis_scale_mode: linear
     show_null_labels: false
-  
+
   - name: top_level_avgs
     title: Top level averages
     type: looker_single_record
@@ -92,7 +92,7 @@
     limit: 500
     column_limit: 50
     show_view_names: true
-  
+
   - name: top_level_totals
     title: Top level totals
     type: looker_single_record
@@ -105,7 +105,7 @@
     limit: 500
     column_limit: 50
     show_view_names: true
-    
+
   - name: reach_v_clicks
     title: Reach v. clicks by placement and device
     type: looker_scatter
@@ -136,7 +136,7 @@
     y_axis_scale_mode: linear
     show_null_points: true
     point_style: circle
-  
+
   - name: cpa_v_actions
     title: CPA v. actions by placement and device
     type: looker_scatter

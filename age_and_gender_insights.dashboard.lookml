@@ -18,7 +18,7 @@
       height: 400
 
   filters:
-  
+
     - name: age_group
       type: field_filter
       explore: ad_insights_by_age_and_gender
@@ -27,7 +27,7 @@
       type: field_filter
       explore: ad_insights_by_age_and_gender
       field: ad_insights_by_age_and_gender.gender
-      
+
 
   elements:
 
@@ -42,10 +42,10 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    listen: 
+    listen:
       age_group: ad_insights_by_age_and_gender.age
       gender: ad_insights_by_age_and_gender.gender
-  
+
   - name: avg_ctr
     title: Average CTR
     type: single_value
@@ -57,10 +57,10 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    listen: 
+    listen:
       age_group: ad_insights_by_age_and_gender.age
       gender: ad_insights_by_age_and_gender.gender
-    
+
   - name: avg_cpm
     title: Average CPM
     type: single_value
@@ -72,10 +72,10 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    listen: 
+    listen:
       age_group: ad_insights_by_age_and_gender.age
       gender: ad_insights_by_age_and_gender.gender
-    
+
   - name: avg_cpp
     title: Average CPP
     type: single_value
@@ -87,7 +87,7 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    
+
   - name: performance_by_age
     title: Performance by age group
     type: looker_column
@@ -118,7 +118,7 @@
     x_axis_scale: auto
     y_axis_scale_mode: linear
     show_null_labels: false
-  
+
   - name: reach
     title: Reach
     type: single_value
@@ -130,7 +130,7 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    
+
   - name: impressions
     title: Impressions
     type: single_value
@@ -142,7 +142,7 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    
+
   - name: reach_by_age
     title: Reach by age group
     type: looker_pie
@@ -156,7 +156,7 @@
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
-    
+
   - name: impressions_by_age
     title: Impressions by age group
     type: looker_pie
@@ -170,7 +170,7 @@
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
-    
+
   - name: clicks
     title: Clicks
     type: single_value
@@ -182,7 +182,7 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-  
+
   - name: spend
     title: Spend
     type: single_value
@@ -194,7 +194,7 @@
     column_limit: 50
     show_single_value_title: true
     show_comparison: false
-    
+
   - name: clicks_by_age
     title: Clicks by age group
     type: looker_pie
@@ -208,7 +208,7 @@
     value_labels: legend
     colors: ['#FFCC00', '#1E2023', '#3399CC', '#CC3399', '#66CC66', '#999999', '#FF4E00', '#A2ECBA', '#9932CC', '#0000CD']
     show_view_names: true
-  
+
   - name: spend_by_age
     title: Spend by age group
     type: looker_pie

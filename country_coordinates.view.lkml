@@ -1,12 +1,11 @@
 ## simpler solution here: https://discourse.looker.com/t/using-custom-map-layers-for-visualizing-region-data-3-42/2303
 
-- view: country_coordinates
-  derived_table:
-    sql: |
-      select country, country_iso
+view: country_coordinates {
+  derived_table: {
+    sql: select country, country_iso
       from
       (
-      select 
+      select
       'AF' as country,'AFG' as country_iso
       union all select 'AX','ALA'
       union all select 'AL','ALB'
@@ -255,23 +254,27 @@
       union all select 'ZM','ZMB'
       union all select 'ZW','ZWE'
       ) temp
+       ;;
+  }
 
+  dimension: country {
+    type: string
+    sql: ${TABLE}.country ;;
+  }
 
-  fields:
-    - dimension: country
-      type: string
-      sql: ${TABLE}.country
-    - dimension: country_iso
-      type: string
-      sql: ${TABLE}.country_iso
-      
+  dimension: country_iso {
+    type: string
+    sql: ${TABLE}.country_iso ;;
+  }
+}
+
 ## TO USE COORDINATES
-  
+
 #     sql: |
 #       select country, latitude, longitude, name
 #       from
 #       (
-#       select 
+#       select
 #       'AD' as country,'42.546245' as latitude,'1.601554' as longitude,'Andorra' as name
 #       union all select 'AE','23.424076','53.847818','United Arab Emirates'
 #       union all select 'AF','33.93911','67.709953','Afghanistan'
@@ -518,23 +521,22 @@
 #       union all select 'ZM','-13.133897','27.849332','Zambia'
 #       union all select 'ZW','-19.015438','29.154857','Zimbabwe'
 #       ) temp
-# 
-# 
+#
+#
 #   fields:
 # #     Define your dimensions and measures here, like this:
 #     - dimension: country
 #       type: string
 #       sql: ${TABLE}.country
-#       
+#
 #     - dimension: latitude
 #       type: string
 #       sql: ${TABLE}.latitude
-#       
+#
 #     - dimension: longitude
 #       type: string
 #       sql: ${TABLE}.longitude
-#       
+#
 #     - dimension: name
 #       type: string
 #       sql: ${TABLE}.name
-
