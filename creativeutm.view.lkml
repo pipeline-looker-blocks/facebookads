@@ -1,6 +1,6 @@
 view: creativeutm {
   derived_table: {
-    sql:            # get utm for campaigns
+    sql:
       SELECT
         id,
         split_part((regexp_substr(object_story_spec__link_data__link,'campaign=([^&]*)[^&]')),'=',2) as utm_campaign
