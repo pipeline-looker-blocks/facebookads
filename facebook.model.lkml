@@ -1,4 +1,4 @@
-connection: "vandelay_looker_connection"
+connection: "stitch_vandelay"
 
 # include all the views
 include: "*.view"

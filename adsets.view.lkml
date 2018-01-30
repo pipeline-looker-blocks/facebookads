@@ -1,5 +1,5 @@
 view: adsets {
-  sql_table_name: looker_facebook.facebook_adsets_x ;;
+  sql_table_name: rjm_facebook_data.facebook_adsets_101441173373823 ;;
 
   dimension: id {
     primary_key: yes

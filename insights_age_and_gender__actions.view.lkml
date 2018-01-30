@@ -1,5 +1,5 @@
 view: ad_actions_by_age_and_gender {
-  sql_table_name: looker_facebook.facebook_ads_insights_age_and_gender_x__actions ;;
+  sql_table_name: rjm_facebook_data.facebook_ads_insights_age_and_gender_101441173373823__actions ;;
   #   - dimension: 1d_click
   #     type: number
   #     sql: ${TABLE}.1d_click
@@ -26,27 +26,27 @@ view: ad_actions_by_age_and_gender {
 
   dimension: ad_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_ad_id ;;
+    sql: ${TABLE}._sdc_source_key_ad_id ;;
   }
 
   dimension: adset_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_adset_id ;;
+    sql: ${TABLE}._sdc_source_key_adset_id ;;
   }
 
   dimension: campaign_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_campaign_id ;;
+    sql: ${TABLE}._sdc_source_key_campaign_id ;;
   }
 
   dimension: date_start {
     type: string
-    sql: ${TABLE}._rjm_source_key_date_start ;;
+    sql: ${TABLE}._sdc_source_key_date_start ;;
   }
 
   dimension: gender {
     type: string
-    sql: ${TABLE}._rjm_source_key_gender ;;
+    sql: ${TABLE}._sdc_source_key_gender ;;
   }
 
   dimension: action_destination_by_age_and_gender {

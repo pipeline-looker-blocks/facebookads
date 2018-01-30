@@ -1,5 +1,5 @@
 view: ad_actions_by_country {
-  sql_table_name: looker_facebook.facebook_ads_insights_country_x__actions ;;
+  sql_table_name: rjm_facebook_data.facebook_ads_insights_country_101441173373823__actions ;;
   #   - dimension: 1d_click
   #     type: number
   #     sql: ${TABLE}.1d_click
@@ -26,23 +26,23 @@ view: ad_actions_by_country {
 
   dimension: ad_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_ad_id ;;
+    sql: ${TABLE}._sdc_source_key_ad_id ;;
   }
 
   dimension: adset_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_adset_id ;;
+    sql: ${TABLE}._sdc_source_key_adset_id ;;
   }
 
   dimension: campaign_id {
     type: string
-    sql: ${TABLE}._rjm_source_key_campaign_id ;;
+    sql: ${TABLE}._sdc_source_key_campaign_id ;;
   }
 
   dimension_group: date_start {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}._rjm_source_key_date_start ;;
+    sql: ${TABLE}._sdc_source_key_date_start ;;
   }
 
   dimension: action_destination {
