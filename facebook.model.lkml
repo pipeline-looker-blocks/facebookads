@@ -26,6 +26,12 @@ explore: ads {
     sql_on: ${ads.id} = ${ad_insights.ad_id} ;;
     relationship: many_to_one
   }
+
+  join: adcreative {
+    type: left_outer
+    sql_on: ${ads.creative_id} = ${adcreative.id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: ad_insights {
@@ -200,6 +206,10 @@ explore: adsets {
     sql_on: ${adsets.campaign_id} = ${campaigns.id} ;;
     relationship: many_to_one
   }
+
+
 }
 
 explore: campaigns {}
+
+explore: adcreative {}

@@ -37,6 +37,11 @@ view: ads {
   #     description:
   #     type: string
   #     sql: ${TABLE}.bid_type
+  dimension: creative_id {
+    type: string
+    sql: ${TABLE}.creative__id ;;
+
+  }
 
   dimension: campaign_id {
     type: string

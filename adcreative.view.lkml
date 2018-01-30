@@ -1,4 +1,4 @@
-view: ads_campaign_signups {
+view: adcreative {
   sql_table_name: rjm_facebook_data.facebook_adcreative_101441173373823 ;;
 
     dimension: actor_id {
