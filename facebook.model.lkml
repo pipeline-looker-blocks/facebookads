@@ -32,6 +32,12 @@ explore: ads {
     sql_on: ${ads.creative_id} = ${adcreative.id} ;;
     relationship: many_to_one
   }
+
+  join: creativeutm {
+    type: left_outer
+    sql_on: ${ads.creative_id} = ${creativeutm.creative_id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: ad_insights {
