@@ -21,21 +21,21 @@ explore: ads {
     relationship: many_to_one
   }
 
-  join: ad_insights {
-    type: left_outer
-    sql_on: ${ads.id} = ${ad_insights.ad_id} ;;
-    relationship: many_to_one
-  }
-
   join: adcreative {
     type: left_outer
     sql_on: ${ads.creative_id} = ${adcreative.id} ;;
     relationship: many_to_one
   }
 
-  join: creativeutm {
+  join: campaign_utm {
     type: left_outer
-    sql_on: ${ads.creative_id} = ${creativeutm.creative_id} ;;
+    sql_on: ${ads.creative_id} = ${campaign_utm.creative_id} ;;
+    relationship: many_to_one
+  }
+
+  join: customers {
+    type:  left_outer
+    sql_on: ${campaign_utm.utm_campaign} = ${customers.utm} ;;
     relationship: many_to_one
   }
 }

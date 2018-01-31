@@ -1,4 +1,4 @@
-view: creativeutm {
+view: campaign_utm {
   derived_table: {
     sql:
       SELECT
@@ -12,6 +12,7 @@ view: creativeutm {
   dimension: creative_id {
     type: number
     sql: ${TABLE}.id ;;
+    primary_key: yes
   }
 
   dimension: utm_campaign {
