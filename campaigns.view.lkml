@@ -1,5 +1,5 @@
 view: campaigns {
-  sql_table_name: rjm_facebook_data.facebook_campaigns_101441173373823 ;;
+  sql_table_name: facebook_data.facebook_campaigns_101441173373823 ;;
 
   dimension: id {
     primary_key: yes

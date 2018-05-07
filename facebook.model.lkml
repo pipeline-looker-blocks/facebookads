@@ -3,7 +3,7 @@ connection: "facebook_data"
 # include all the views
 include: "*.view"
 
-# include all the dashboards
+# include all the dashboards #
 include: "*.dashboard"
 
 explore: country_coordinates {}

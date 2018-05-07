@@ -1,5 +1,5 @@
 view: ad_actions_by_country {
-  sql_table_name: rjm_facebook_data.facebook_ads_insights_country_101441173373823__actions ;;
+  sql_table_name: facebook_data.facebook_ads_insights_country_101441173373823__actions ;;
   #   - dimension: 1d_click
   #     type: number
   #     sql: ${TABLE}.1d_click

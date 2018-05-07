@@ -1,5 +1,5 @@
 view: ad_insights_by_placement_and_device {
-  sql_table_name: rjm_facebook_data.facebook_ads_insights_placement_and_device_101441173373823 ;;
+  sql_table_name: facebook_data.facebook_ads_insights_placement_and_device_101441173373823 ;;
   ## STANDARD FIELDS
 
   dimension: account_id {

@@ -1,5 +1,5 @@
 view: ad_insights_by_country {
-  sql_table_name: rjm_facebook_data.facebook_ads_insights_country_101441173373823 ;;
+  sql_table_name: facebook_data.facebook_ads_insights_country_101441173373823 ;;
   ## STANDARD FIELDS
 
   dimension: account_id {
