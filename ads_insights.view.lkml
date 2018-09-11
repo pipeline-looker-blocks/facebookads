@@ -1,7 +1,15 @@
+#The ads_insights table contains entries for each campaign/set/ad combination for each day, along with detailed statistics.
 view: ad_insights {
   sql_table_name: facebook_data.facebook_ads_insights_101441173373823 ;;
   # API documentation: https://developers.facebook.com/docs/marketing-api/insights/fields/v2.6
-
+  
+   dimension: pk {
+    primary_key: yes
+    hidden: yes
+    type: string
+    sql: ${ad_id}||${adset_id}||${campaign_id}||${start_raw} ;;
+  }
+  
   ## STANDARD FIELDS
 
   dimension: account_id {
@@ -59,15 +67,15 @@ view: ad_insights {
     sql: ${TABLE}.ctr ;;
   }
 
-  dimension_group: date_start {
+  dimension_group: start {
     type: time
-    timeframes: [time, date, week, month]
+    timeframes: [raw, time, date, week, month]
     sql: ${TABLE}.date_start ;;
   }
 
-  dimension_group: date_stop {
+  dimension_group: stop {
     type: time
-    timeframes: [time, date, week, month]
+    timeframes: [raw, time, date, week, month]
     sql: ${TABLE}.date_stop ;;
   }
 
