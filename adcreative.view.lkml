@@ -136,11 +136,6 @@ view: adcreative {
       sql: ${TABLE}.account_id;;
     }
 
-    dimension: use_page_actor_override {
-      type: yesno
-      sql: ${TABLE}.use_page_actor_override;;
-    }
-
     dimension: status {
       type: string
       sql: ${TABLE}.status;;

@@ -64,16 +64,6 @@ view: ads {
     sql: ${TABLE}.name ;;
   }
 
-  dimension: targeting__age_max {
-    type: number
-    sql: ${TABLE}.targeting__age_max ;;
-  }
-
-  dimension: targeting__age_min {
-    type: number
-    sql: ${TABLE}.targeting__age_min ;;
-  }
-
   measure: count {
     type: count
     drill_fields: [id, name]
