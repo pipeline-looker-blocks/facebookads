@@ -32,6 +32,12 @@ view: ad_insights_by_placement_and_device {
     sql: ${TABLE}.cpc ;;
   }
 
+  dimension: cost {
+    type:  number
+    sql:  ${cpc}*${clicks} ;;
+
+  }
+
   dimension: cpm {
     type: number
     sql: ${TABLE}.cpm ;;
@@ -103,33 +109,57 @@ view: ad_insights_by_placement_and_device {
 
   measure: total_clicks {
     type: sum
-    sql: ${TABLE}.clicks ;;
+    sql: ${clicks} ;;
     drill_fields: [impression_device, placement]
   }
 
-  measure: avg_cpc {
-    type: average
-    sql: ${TABLE}.cpc ;;
+  measure: total_cost {
+    type: sum
+    sql:  ${cost} ;;
+    value_format_name: decimal_2
   }
 
+  measure: avg_cpc {
+    label: "Average CPC"
+    type:  number
+    sql:  ${total_cost} / nullif(${total_clicks},0) ;;
+    value_format_name: usd
+    drill_fields: [detail*]
+  }
+
+#   measure: avg_cpc {
+#     label: "Average CPC"
+#     type: average
+#     sql: ${TABLE}.cpc ;;
+#     value_format_name: decimal_2
+#   }
+
   measure: avg_cpm {
+    label: "Average CPM"
     type: average
     sql: ${TABLE}.cpm ;;
+    value_format_name: decimal_2
   }
 
   measure: avg_cpp {
+    label: "Average CPP"
     type: average
     sql: ${TABLE}.cpp ;;
+    value_format_name: decimal_2
   }
 
   measure: avg_ctr {
+    label: "Average CTR"
     type: average
     sql: ${TABLE}.ctr ;;
+    value_format_name: decimal_2
   }
 
   measure: avg_frequency {
+    label: "Average Frequency"
     type: average
     sql: ${TABLE}.frequency ;;
+    value_format_name: decimal_2
   }
 
   measure: total_impressions {
@@ -152,134 +182,11 @@ view: ad_insights_by_placement_and_device {
   measure: total_actions {
     type: sum
     sql: ${TABLE}.total_actions ;;
-    drill_fields: [impression_device, placement]
+    drill_fields: [detail*]
   }
+
+  set: detail {
+    fields: [impression_device, placement, total_clicks, total_cost]
+  }
+
 }
-
-###################################################################################################
-
-
-## ADDITIONAL FIELDS
-
-#   - dimension: app_store_clicks
-#     type: number
-#     sql: ${TABLE}.app_store_clicks
-#
-#   - dimension: canvas_avg_view_percent
-#     type: number
-#     sql: ${TABLE}.canvas_avg_view_percent
-#
-#   - dimension: canvas_avg_view_time
-#     type: number
-#     sql: ${TABLE}.canvas_avg_view_time
-#
-#   - dimension: cost_per_estimated_ad_recallers
-#     type: number
-#     sql: ${TABLE}.cost_per_estimated_ad_recallers
-#
-#   - dimension: cost_per_total_action
-#     type: number
-#     sql: ${TABLE}."cost_per_total_action#b0a03a58e5208dd36f40763db0e6f40c"
-#
-#   - dimension: deeplink_clicks
-#     type: number
-#     sql: ${TABLE}.deeplink_clicks
-#
-#   - dimension: estimated_ad_recall_rate
-#     type: number
-#     sql: ${TABLE}.estimated_ad_recall_rate
-#
-#   - dimension: estimated_ad_recall_rate_lower_bound
-#     type: number
-#     sql: ${TABLE}.estimated_ad_recall_rate_lower_bound
-#
-#   - dimension: estimated_ad_recall_rate_upper_bound
-#     type: number
-#     sql: ${TABLE}.estimated_ad_recall_rate_upper_bound
-#
-#   - dimension: social_clicks
-#     type: number
-#     sql: ${TABLE}.social_clicks
-#
-#   - dimension: social_impressions
-#     type: number
-#     sql: ${TABLE}.social_impressions
-#
-#   - dimension: social_reach
-#     type: number
-#     sql: ${TABLE}.social_reach
-#
-#   - dimension: total_action_value
-#     type: number
-#     sql: ${TABLE}.total_action_value
-#
-#   - dimension: website_clicks
-#     type: number
-#     sql: ${TABLE}.website_clicks
-
-
-## INLINE AND UNIQUE
-
-#   - dimension: cost_per_inline_link_click
-#     type: number
-#     sql: ${TABLE}."cost_per_inline_link_click#01932ca7b21eb72c1e10d6cb906d6b36"
-#
-#   - dimension: cost_per_inline_post_engagement
-#     type: number
-#     sql: ${TABLE}."cost_per_inline_post_engagement#b9ab6d658c7c6e740e14ecb3dc29cc24"
-#
-#   - dimension: cost_per_unique_click
-#     type: number
-#     sql: ${TABLE}."cost_per_unique_click#36f150a496864f4cac200309ab821f20"
-#
-#   - dimension: cost_per_unique_inline_link_click
-#     type: number
-#     sql: ${TABLE}."cost_per_unique_inline_link_click#642bc76819bf60d45bab4e4a16f2673c"
-#
-#   - dimension: inline_link_click_ctr
-#     type: number
-#     sql: ${TABLE}."inline_link_click_ctr#bba584e0926a49cd69a4ddb7b53ac72c"
-#
-#   - dimension: inline_link_clicks
-#     type: number
-#     sql: ${TABLE}.inline_link_clicks
-#
-#   - dimension: inline_post_engagement
-#     type: number
-#     sql: ${TABLE}.inline_post_engagement
-#
-#   - dimension: total_unique_actions
-#     type: number
-#     sql: ${TABLE}.total_unique_actions
-#
-#   - dimension: unique_clicks
-#     type: number
-#     sql: ${TABLE}.unique_clicks
-#
-#   - dimension: unique_ctr
-#     type: number
-#     sql: ${TABLE}."unique_ctr#de2cc78c3d04232015542fb4d5b75dce"
-#
-#   - dimension: unique_impressions
-#     type: number
-#     sql: ${TABLE}.unique_impressions
-#
-#   - dimension: unique_inline_link_click_ctr
-#     type: number
-#     sql: ${TABLE}."unique_inline_link_click_ctr#e963e1e4e1f43888ae87c79cf2d6bb9e"
-#
-#   - dimension: unique_inline_link_clicks
-#     type: number
-#     sql: ${TABLE}.unique_inline_link_clicks
-#
-#   - dimension: unique_link_clicks_ctr
-#     type: number
-#     sql: ${TABLE}."unique_link_clicks_ctr#aa48a871d5a64cab44a6be0bcd25a441"
-#
-#   - dimension: unique_social_clicks
-#     type: number
-#     sql: ${TABLE}.unique_social_clicks
-#
-#   - dimension: unique_social_impressions
-#     type: number
-#     sql: ${TABLE}.unique_social_impressions

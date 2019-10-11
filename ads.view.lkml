@@ -18,25 +18,6 @@ view: ads {
     sql: ${TABLE}.adset_id ;;
   }
 
-  #   - dimension: bid_info__actions
-  #     description:
-  #     type: number
-  #     sql: ${TABLE}.bid_info__actions
-  #
-  #   - dimension: bid_info__clicks
-  #     description:
-  #     type: number
-  #     sql: ${TABLE}.bid_info__clicks
-  #
-  #   - dimension: bid_info__reach
-  #     description:
-  #     type: number
-  #     sql: ${TABLE}.bid_info__reach
-  #
-  #   - dimension: bid_type
-  #     description:
-  #     type: string
-  #     sql: ${TABLE}.bid_type
   dimension: creative_id {
     type: string
     sql: ${TABLE}.creative__id ;;

@@ -1,3 +1,8 @@
+
+#Whats the right way to do this?????
+
+
+
 ## simpler solution here: https://discourse.looker.com/t/using-custom-map-layers-for-visualizing-region-data-3-42/2303
 
 view: country_coordinates {

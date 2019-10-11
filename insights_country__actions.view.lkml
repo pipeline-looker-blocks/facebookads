@@ -1,28 +1,5 @@
 view: ad_actions_by_country {
   sql_table_name: facebook_data.facebook_ads_insights_country_101441173373823__actions ;;
-  #   - dimension: 1d_click
-  #     type: number
-  #     sql: ${TABLE}.1d_click
-  #
-  #   - dimension: 1d_view
-  #     type: number
-  #     sql: ${TABLE}.1d_view
-  #
-  #   - dimension: 28d_click
-  #     type: number
-  #     sql: ${TABLE}.28d_click
-  #
-  #   - dimension: 28d_view
-  #     type: number
-  #     sql: ${TABLE}.28d_view
-  #
-  #   - dimension: 7d_click
-  #     type: number
-  #     sql: ${TABLE}.7d_click
-  #
-  #   - dimension: 7d_view
-  #     type: number
-  #     sql: ${TABLE}.7d_view
 
   dimension: ad_id {
     type: string

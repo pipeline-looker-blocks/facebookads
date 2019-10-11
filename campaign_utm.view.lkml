@@ -3,7 +3,7 @@ view: campaign_utm {
     sql:
       SELECT
         id,
-        split_part((regexp_substr(object_story_spec__link_data__link,'campaign=([^&]*)[^&]')),'=',2) as utm_campaign
+        split_part((regexp_matches(object_story_spec__link_data__link,'campaign=([^&]*)[^&]')),'=',2) as utm_campaign
       FROM facebook_data.facebook_adcreative_101441173373823
       ;;
   }

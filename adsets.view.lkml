@@ -12,14 +12,6 @@ view: adsets {
     sql: ${TABLE}.account_id ;;
   }
 
-  #   - dimension: bid_info__clicks
-  #     type: number
-  #     sql: ${TABLE}.bid_info__clicks
-  #
-  #   - dimension: budget_remaining
-  #     type: number
-  #     sql: ${TABLE}.budget_remaining
-
   dimension: campaign_id {
     type: string
     sql: ${TABLE}.campaign_id ;;
@@ -77,4 +69,5 @@ view: adsets {
     type: count
     drill_fields: [id, name]
   }
+
 }

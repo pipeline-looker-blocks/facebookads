@@ -26,11 +26,6 @@ view: adcreative {
       sql: ${TABLE}.image_url;;
     }
 
-    dimension: link_url {
-      type: string
-      sql: ${TABLE}.link_url;;
-    }
-
     dimension: name {
       type: string
       sql: ${TABLE}.name;;
