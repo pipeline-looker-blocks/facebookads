@@ -209,7 +209,3 @@ explore: adsets {
 
 
 }
-
-explore: campaigns {}
-
-explore: adcreative {}
