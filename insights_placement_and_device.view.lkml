@@ -117,12 +117,13 @@ view: ad_insights_by_placement_and_device {
     type: sum
     sql:  ${cost} ;;
     value_format_name: decimal_2
+    drill_fields: [detail*]
   }
 
   measure: avg_cpc {
     label: "Average CPC"
     type:  number
-    sql:  ${total_cost} / nullif(${total_clicks},0) ;;
+    sql:  ${total_spend} / nullif(${total_clicks},0) ;;
     value_format_name: usd
     drill_fields: [detail*]
   }
@@ -139,6 +140,7 @@ view: ad_insights_by_placement_and_device {
     type: average
     sql: ${cpm} ;;
     value_format_name: usd
+    drill_fields: [detail*]
     }
 
   measure: avg_cpp {
@@ -146,6 +148,7 @@ view: ad_insights_by_placement_and_device {
     type: average
     sql: ${cpp} ;;
     value_format_name: usd
+    drill_fields: [detail*]
     }
 
   measure: avg_ctr {
@@ -153,6 +156,7 @@ view: ad_insights_by_placement_and_device {
     type: number
     sql: ${total_clicks}/nullif(${total_impressions},0) ;;
     value_format_name: percent_2
+    drill_fields: [detail*]
   }
 
   measure: avg_frequency {
@@ -160,6 +164,7 @@ view: ad_insights_by_placement_and_device {
     type: average
     sql: ${frequency} ;;
     value_format_name: decimal_2
+    drill_fields: [detail*]
   }
 
   measure: total_impressions {
@@ -191,7 +196,7 @@ view: ad_insights_by_placement_and_device {
   }
 
   set: detail {
-    fields: [impression_device, placement, total_clicks, total_cost, total_impressions]
+    fields: [impression_device, placement, total_clicks, total_cost, total_impressions, total_spend, total_reach, avg_frequency, avg_ctr, avg_cpp, avg_cpm, avg_cpc]
   }
 
 }

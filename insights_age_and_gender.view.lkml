@@ -104,12 +104,14 @@ view: ad_insights_by_age_and_gender {
     type: sum
     sql: ${clicks} ;;
     value_format_name: decimal_0
+    drill_fields: [detail*]
   }
 
   measure: avg_cpc {
     type: number
     sql: ${total_spend} / nullif(${total_clicks},0) ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
 #   measure: avg_cpc {
@@ -122,18 +124,21 @@ view: ad_insights_by_age_and_gender {
     type: average
     sql: ${cpm} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   measure: avg_cpp {
     type: average
     sql: ${cpp} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   measure: avg_ctr {
     type: number
     sql: ${total_clicks}/nullif(${total_impressions},0) ;;
     value_format_name: percent_2
+    drill_fields: [detail*]
   }
 
 #   measure: avg_ctr {
@@ -146,21 +151,32 @@ view: ad_insights_by_age_and_gender {
     type: average
     sql: ${frequency} ;;
     value_format_name: decimal_2
+    drill_fields: [detail*]
   }
 
   measure: total_impressions {
     type: sum
     sql: ${impressions} ;;
+    value_format_name: decimal_0
+    drill_fields: [detail*]
   }
 
   measure: total_reach {
     type: sum
     sql: ${reach} ;;
+    value_format_name: decimal_0
+    drill_fields: [detail*]
   }
 
   measure: total_spend {
     type: sum
     sql: ${spend} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
+
+  set: detail {
+    fields: [age, gender, ad_id, campaign_id, campaign.name, total_spend, total_clicks, total_impressions, total_reach, avg_frequency, avg_ctr, avg_cpc]
+  }
+
 }
