@@ -108,26 +108,32 @@ view: ad_insights_by_age_and_gender {
   measure: avg_cpc {
     type: average
     sql: ${TABLE}.cpc ;;
+    value_format_name: usd
   }
 
   measure: avg_cpm {
     type: average
     sql: ${TABLE}.cpm ;;
+    value_format_name: usd
+
   }
 
   measure: avg_cpp {
     type: average
     sql: ${TABLE}.cpp ;;
+    value_format_name: usd
   }
 
   measure: avg_ctr {
     type: average
     sql: ${TABLE}.ctr ;;
+    value_format_name: decimal_2
   }
 
   measure: avg_frequency {
     type: average
     sql: ${TABLE}.frequency ;;
+    value_format_name: decimal_2
   }
 
   measure: total_impressions {
@@ -143,5 +149,6 @@ view: ad_insights_by_age_and_gender {
   measure: total_spend {
     type: sum
     sql: ${TABLE}.spend ;;
+    value_format_name: usd
   }
 }

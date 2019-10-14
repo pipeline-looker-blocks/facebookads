@@ -117,6 +117,7 @@
     - table_calculation: cost_per_action
       label: cost_per_action
       expression: ${ad_insights.total_spend} / ${ad_insights.total_actions}
+      value_format_name: usd
     sorts: [campaigns.name]
     limit: 5000
     show_view_names: false
@@ -139,6 +140,7 @@
     - table_calculation: cost_per_action
       label: Cost per action
       expression: ${ad_insights.total_spend} / ${ad_insights.total_actions}
+      value_format_name: usd
     hidden_fields: [ad_insights.total_spend, campaigns.name]
     sorts: [cost_per_action desc]
     description: 'Evaluate campaign performance by comparing the actions generated to the total spent on the campaign.'

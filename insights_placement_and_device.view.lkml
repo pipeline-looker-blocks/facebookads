@@ -138,15 +138,15 @@ view: ad_insights_by_placement_and_device {
     label: "Average CPM"
     type: average
     sql: ${TABLE}.cpm ;;
-    value_format_name: decimal_2
-  }
+    value_format_name: usd
+    }
 
   measure: avg_cpp {
     label: "Average CPP"
     type: average
     sql: ${TABLE}.cpp ;;
-    value_format_name: decimal_2
-  }
+    value_format_name: usd
+    }
 
   measure: avg_ctr {
     label: "Average CTR"
