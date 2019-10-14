@@ -154,6 +154,7 @@ view: ad_insights {
     description: "the average number of times your ad was served to each person"
     type: average
     sql: ${frequency} ;;
+    value_format_name: decimal_2
     drill_fields: [detail*]
   }
 
