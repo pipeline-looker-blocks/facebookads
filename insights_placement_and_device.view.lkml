@@ -166,6 +166,7 @@ view: ad_insights_by_placement_and_device {
     type: sum
     sql: ${impressions} ;;
     value_format_name: decimal_0
+    drill_fields: [detail*]
   }
 
   measure: total_reach {
@@ -190,7 +191,7 @@ view: ad_insights_by_placement_and_device {
   }
 
   set: detail {
-    fields: [impression_device, placement, total_clicks, total_cost]
+    fields: [impression_device, placement, total_clicks, total_cost, total_impressions]
   }
 
 }

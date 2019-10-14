@@ -116,22 +116,25 @@ view: ad_insights {
   measure: total_actions {
     type: sum
     sql: ${actions} ;;
-    drill_fields: [campaign_id]
+    drill_fields: [detail*]
   }
 
   measure: total_reach {
     type: sum
     sql: ${reach} ;;
+    drill_fields: [detail*]
   }
 
   measure: total_clicks {
     type: sum
     sql: ${clicks} ;;
+    drill_fields: [detail*]
   }
 
   measure: total_impressions {
     type: sum
     sql: ${impressions} ;;
+    drill_fields: [detail*]
   }
 
   measure: people_taking_action {
@@ -151,6 +154,7 @@ view: ad_insights {
     description: "the average number of times your ad was served to each person"
     type: average
     sql: ${frequency} ;;
+    drill_fields: [detail*]
   }
 
   #### NOTE: you will need to use the cpm column that appears in your dataset.
@@ -160,6 +164,7 @@ view: ad_insights {
     type: average
     sql: ${cpm} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   #### NOTE: you will need to use the cpp column that appears in your dataset.
@@ -169,6 +174,7 @@ view: ad_insights {
     type: average
     sql: ${cpp} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   #### NOTE: you will need to use the spend column that appears in your dataset.
@@ -177,18 +183,21 @@ view: ad_insights {
     type: sum
     sql: ${spend} ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   measure: avg_ctr {
     type: number
     sql: ${total_clicks}/nullif(${total_impressions},0);;
     value_format_name: percent_2
+    drill_fields: [detail*]
   }
 
   measure: avg_cpc {
     type: number
     sql: ${total_spend}/nullif(${total_clicks},0) ;;
     value_format_name: usd
+    drill_fields: [detail*]
   }
 
   # #### NOTE: you will need to use the ctr column that appears in your dataset.
@@ -218,5 +227,9 @@ view: ad_insights {
   measure: avg_cost_per_inline_link_click {
     type: average
     sql: ${TABLE}.cost_per_inline_link_click ;;
+  }
+
+  set: detail {
+    fields: [campaign_id, campaign_name, total_clicks, total_spend, total_impressions, total_reach, avg_frequency]
   }
 }
