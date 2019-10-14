@@ -148,6 +148,7 @@
     - table_calculation: cost_per_action
       label: Cost per action
       expression: ${ad_insights_by_placement_and_device.total_spend} / ${ad_insights_by_placement_and_device.total_actions}
+      value_format_name: usd
     hidden_fields: [ad_insights_by_placement_and_device.impression_device, ad_insights_by_placement_and_device.total_spend,
       ad_insights_by_placement_and_device.placement]
     sorts: [ad_insights_by_placement_and_device.total_spend desc]

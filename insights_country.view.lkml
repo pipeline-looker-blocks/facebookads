@@ -112,47 +112,50 @@ view: ad_insights_by_country {
 
   measure: total_clicks {
     type: sum
-    sql: ${TABLE}.clicks ;;
+    sql: ${clicks} ;;
+    value_format_name: decimal_0
   }
 
   measure: avg_cpc {
-    type: average
-    sql: ${TABLE}.cpc ;;
+    type: number
+    sql: ${total_spend} / nullif(${total_clicks},0) ;;
+    value_format_name: usd
   }
 
   measure: avg_cpm {
     type: average
     sql: ${TABLE}.cpm ;;
+    value_format_name: usd
   }
 
   measure: avg_cpp {
     type: average
-    sql: ${TABLE}.cpp ;;
+    sql: ${cpp} ;;
   }
 
   measure: avg_ctr {
-    type: average
-    sql: ${TABLE}.ctr ;;
+    type: number
+    sql: ${total_clicks}/nullif(${total_impressions},0);;
   }
 
   measure: avg_frequency {
     type: average
-    sql: ${TABLE}.frequency ;;
+    sql: ${frequency} ;;
   }
 
   measure: total_impressions {
     type: sum
-    sql: ${TABLE}.impressions ;;
+    sql: ${impressions} ;;
   }
 
   measure: total_reach {
     type: sum
-    sql: ${TABLE}.reach ;;
+    sql: ${reach} ;;
   }
 
   measure: total_spend {
     type: sum
-    sql: ${TABLE}.spend ;;
+    sql: ${spend} ;;
   }
 
   measure: total_actions {

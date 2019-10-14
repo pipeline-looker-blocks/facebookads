@@ -111,28 +111,27 @@ view: ad_insights {
 
   measure: count {
     type: count
-    drill_fields: []
   }
 
   measure: total_actions {
     type: sum
-    sql: ${TABLE}.total_actions ;;
+    sql: ${actions} ;;
     drill_fields: [campaign_id]
   }
 
   measure: total_reach {
     type: sum
-    sql: ${TABLE}.reach ;;
+    sql: ${reach} ;;
   }
 
   measure: total_clicks {
     type: sum
-    sql: ${TABLE}.clicks ;;
+    sql: ${clicks} ;;
   }
 
   measure: total_impressions {
     type: sum
-    sql: ${TABLE}.impressions ;;
+    sql: ${impressions} ;;
   }
 
   measure: people_taking_action {
@@ -151,7 +150,7 @@ view: ad_insights {
   measure: avg_frequency {
     description: "the average number of times your ad was served to each person"
     type: average
-    sql: ${TABLE}.frequency ;;
+    sql: ${frequency} ;;
   }
 
   #### NOTE: you will need to use the cpm column that appears in your dataset.
@@ -159,7 +158,7 @@ view: ad_insights {
   measure: avg_cpm {
     description: "The average cost you've paid to have 1,000 impressions on your ad."
     type: average
-    sql: ${TABLE}.cpm ;;
+    sql: ${cpm} ;;
     value_format_name: usd
   }
 
@@ -168,7 +167,7 @@ view: ad_insights {
   measure: avg_cpp {
     description: "The average cost you've paid to have your ad served to 1,000 unique people."
     type: average
-    sql: ${TABLE}.cpp ;;
+    sql: ${cpp} ;;
     value_format_name: usd
   }
 
@@ -176,24 +175,36 @@ view: ad_insights {
 
   measure: total_spend {
     type: sum
-    sql: ${TABLE}.spend ;;
+    sql: ${spend} ;;
     value_format_name: usd
   }
-
-  #### NOTE: you will need to use the ctr column that appears in your dataset.
 
   measure: avg_ctr {
-    type: average
-    sql: ${TABLE}.ctr ;;
+    type: number
+    sql: ${total_clicks}/nullif(${total_impressions},0);;
+    value_format_name: percent_2
   }
-
-  #### NOTE: you will need to use the cpc column that appears in your dataset.
 
   measure: avg_cpc {
-    type: average
-    sql: ${TABLE}.cpc ;;
+    type: number
+    sql: ${total_spend}/nullif(${total_clicks},0) ;;
     value_format_name: usd
   }
+
+  # #### NOTE: you will need to use the ctr column that appears in your dataset.
+
+  # measure: avg_ctr {
+  #   type: average
+  #   sql: ${TABLE}.ctr ;;
+  # }
+
+  # #### NOTE: you will need to use the cpc column that appears in your dataset.
+
+  # measure: avg_cpc {
+  #   type: average
+  #   sql: ${TABLE}.cpc ;;
+  #   value_format_name: usd
+  # }
 
   #### NOTE: you will need to use the inline link click ctr column that appears in your dataset.
 

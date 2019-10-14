@@ -137,51 +137,55 @@ view: ad_insights_by_placement_and_device {
   measure: avg_cpm {
     label: "Average CPM"
     type: average
-    sql: ${TABLE}.cpm ;;
+    sql: ${cpm} ;;
     value_format_name: usd
     }
 
   measure: avg_cpp {
     label: "Average CPP"
     type: average
-    sql: ${TABLE}.cpp ;;
+    sql: ${cpp} ;;
     value_format_name: usd
     }
 
   measure: avg_ctr {
     label: "Average CTR"
-    type: average
-    sql: ${TABLE}.ctr ;;
-    value_format_name: decimal_2
+    type: number
+    sql: ${total_clicks}/nullif(${total_impressions},0) ;;
+    value_format_name: percent_2
   }
 
   measure: avg_frequency {
     label: "Average Frequency"
     type: average
-    sql: ${TABLE}.frequency ;;
+    sql: ${frequency} ;;
     value_format_name: decimal_2
   }
 
   measure: total_impressions {
     type: sum
-    sql: ${TABLE}.impressions ;;
+    sql: ${impressions} ;;
+    value_format_name: decimal_0
   }
 
   measure: total_reach {
     type: sum
-    sql: ${TABLE}.reach ;;
-    drill_fields: [impression_device, placement]
+    sql: ${reach} ;;
+    value_format_name: decimal_0
+    drill_fields: [detail*]
   }
 
   measure: total_spend {
     type: sum
-    sql: ${TABLE}.spend ;;
-    drill_fields: [impression_device, placement]
+    sql: ${spend} ;;
+    value_format_name: usd
+    drill_fields: [detail*]
   }
 
   measure: total_actions {
     type: sum
     sql: ${TABLE}.total_actions ;;
+    value_format_name: decimal_0
     drill_fields: [detail*]
   }
 
